@@ -2,6 +2,7 @@
 Kcvp.prototype.HeaderSilder = {
     imgdata: [],
     imgcount: 0,
+    imglist:[],
     //jquery object
     $head_bg_img: null,
     $head_title: null,
@@ -15,9 +16,31 @@ Kcvp.prototype.HeaderSilder = {
         this.$avatar_title = $(".content_frame > .head .avatar .img .title");
         this.$avatar_img = $(".content_frame > .head .avatar .img");
 
+        this.LoadImage();
         this.AutoChangeImage();
     },
-    ChangeImage_Start: function(data) {
+    GetImage:function(index,url){
+        var result;
+        $.each(this.imglist,function(){
+            if(this.index==index){
+                result=this.img;
+            }
+        });
+        if(!result){
+            result = new Image();
+            result.src=url;
+            var obj = {
+                index:index,
+                img:result
+            };
+            this.imglist.push(obj);
+        }
+
+        return result;
+    },
+    ChangeImage_Start: function() {
+        var data =this.imgdata[this.imgcount];
+
         var temp_this = this;
         this.$head_bg_img.animate({
             opacity: 0
@@ -53,19 +76,22 @@ Kcvp.prototype.HeaderSilder = {
         if (this.imgcount >= 6) {
             this.imgcount = 0;
         }
-        this.ChangeImage_Start(this.imgdata[this.imgcount]);
+        this.ChangeImage_Start();
 
         var temp_this = this;
-        setTimeout(temp_this.AutoChangeImage, 4000);
+        setTimeout(AutoChangeImage, 4000);
     },
     LoadImage: function() {
         for (var i = 0; i < 6; i++) {
-            var img = new Image();
-            img.src = this.imgdata[this.imgcount][0];
+            this.GetImage(i,this.imgdata[this.imgcount][0]);
         }
     }
 
 };
+
+function AutoChangeImage(){
+    kcvp.HeaderSilder.AutoChangeImage();
+}
 
 
 var kcvp = new Kcvp();
