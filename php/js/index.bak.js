@@ -1,9 +1,9 @@
 ﻿/**
- * @author A;Ming
- * @email y2443@163.com
- * @site wwww.y2443.com,logs.moe
- * @date 2015-01-23
- */
+* @author A;Ming
+* @email y2443@163.com
+* @site wwww.y2443.com,logs.moe
+* @date 2015-01-23
+*/
 var Kcvp = function() {};
 //head
 Kcvp.prototype.Head = function() {
@@ -14,7 +14,6 @@ Kcvp.prototype.Head = function() {
     obj.changetime = 4000;
     obj.index = 0;
 
-    obj.$head = null;
     obj.$head_bg_img = null;
     obj.$head_title = null;
     obj.$avatar = null;
@@ -22,7 +21,6 @@ Kcvp.prototype.Head = function() {
     obj.$avatar_img = null;
 
     obj.Init = function() {
-        obj.$head = $(".content_frame > .head");
         obj.$head_bg_img = $(".content_frame > .head .pic");
         obj.$head_title = $(".content_frame > .head .bg .title");
         obj.$avatar = $(".content_frame > .head .avatar");
@@ -62,17 +60,15 @@ Kcvp.prototype.Head = function() {
     };
     obj.ChangeHeadImage = function() {
         var data = obj.GetItem(obj.index);
-        var img_left = (data.avatarLeft + 14) * -1;
+        var img_left = (data.avatarLeft+14) * -1;
 
         obj.$head_bg_img.animate({
             opacity: 0
         }, 400, function() {
-            // obj.$head_bg_img.css("background-image", "url(" + data.img + ")");
-            // obj.$avatar_img.css({
-            //     "background-position-x": img_left + "px"
-            // }, 800);
-            obj.$head.attr('index', obj.index+1);
-
+            obj.$head_bg_img.css("background-image", "url(" + data.img + ")");
+            obj.$avatar_img.css({
+                "background-position-x": img_left + "px"
+            }, 800);
             obj.$head_bg_img.animate({
                 opacity: 1
             }, 400);

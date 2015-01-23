@@ -14,6 +14,7 @@
     <title><?php echo $page_data->headTitle; ?></title>
     <link rel="shortcut icon" href="icon.jpg">
     <link href="/css/style.css" rel="stylesheet" />
+    <link href="/data/style.php" rel="stylesheet" />
     <meta name="keywords" content="<?php echo $page_data->headKeyword; ?>" />
     <meta name="Description" content="<?php echo $page_data->headDes; ?>" />
 
