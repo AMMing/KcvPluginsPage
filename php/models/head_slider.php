@@ -16,14 +16,14 @@
 
 		function __construct($row)
 		{
-			$this->Id=$row['Id'];
+			$this->Id=(int)$row['Id'];
 			$this->img=$row['img'];
-			$this->avatar_left=$row['avatar_left'];
-			$this->title_left=$row['title_left'];
+			$this->avatarLeft=(int)$row['avatar_left'];
+			$this->titleLeft=(int)$row['title_left'];
 			$this->color=$row['color'];
 			$this->title=$row['title'];
 			$this->des=$row['des'];
-			$this->order=$row['order'];
+			$this->order=(int)$row['order'];
 		}
 	}
 ?>

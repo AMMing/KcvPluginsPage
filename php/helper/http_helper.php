@@ -42,5 +42,8 @@
 			}
 			return $val;
 		}
+		function views($name){
+			include_once(ROOT_PATH.'/views/'.$name.'.php');
+		}
 	}
 ?>

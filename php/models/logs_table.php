@@ -3,20 +3,20 @@
 	/**
 	* softModel
 	*/
-	class softVersionModel
+	class logsTableModel
 	{
 		public $Id;
 		public $softId;
+		public $content;
 		public $ver;
-		public $path;
-		public $updateDate;
+		public $url;
 		function __construct($row)
 		{
 			$this->Id=(int)$row['Id'];
-			$this->softId=(int)$row['soft_id'];
+			$this->softId=(int)$row['soft_Id'];
+			$this->content=$row['content'];
 			$this->ver=$row['ver'];
-			$this->path=$row['path'];
-			$this->updateDate=$row['update_date'];
+			$this->url=$row['url'];
 		}
 	}
 ?>

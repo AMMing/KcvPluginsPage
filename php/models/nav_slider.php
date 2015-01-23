@@ -3,16 +3,17 @@
 	/**
 	* softModel
 	*/
-	class versionInfoModel
+	class navSliderModel
 	{
 		public $Id;
-		public $verId;
-		public $des;
+		public $img;
+		public $order;
+
 		function __construct($row)
 		{
 			$this->Id=(int)$row['Id'];
-			$this->verId=(int)$row['ver_id'];
-			$this->des=$row['des'];
+			$this->img=$row['img'];
+			$this->order=(int)$row['order'];
 		}
 	}
 ?>

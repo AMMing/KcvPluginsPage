@@ -10,7 +10,7 @@
 		public $key=null;
 		function __construct($row)
 		{
-			$this->Id=$row['Id'];
+			$this->Id=(int)$row['Id'];
 			$this->name=$row['name'];
 			$this->key=$row['key'];
 		}
