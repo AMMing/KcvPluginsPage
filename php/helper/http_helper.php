@@ -5,30 +5,7 @@
 	*/
 	class httpHelper
 	{
-		
 		function getIP() {
-			if (getenv('HTTP_CLIENT_IP')) {
-				$ip = getenv('HTTP_CLIENT_IP');
-			}
-			elseif (getenv('HTTP_X_FORWARDED_FOR')) {
-				$ip = getenv('HTTP_X_FORWARDED_FOR');
-			}
-			elseif (getenv('HTTP_X_FORWARDED')) {
-				$ip = getenv('HTTP_X_FORWARDED');
-			}
-			elseif (getenv('HTTP_FORWARDED_FOR')) {
-				$ip = getenv('HTTP_FORWARDED_FOR');
-
-			}
-			elseif (getenv('HTTP_FORWARDED')) {
-				$ip = getenv('HTTP_FORWARDED');
-			}
-			else {
-				$ip = $_SERVER['REMOTE_ADDR'];
-			}
-			return $ip;
-		}
-		function getIP2() {
 			$ip =$_SERVER["REMOTE_ADDR"];
 
 			return $ip;
@@ -39,7 +16,7 @@
 			header('Location: '.$url);
 			exit;
 		}
-		
+
 		function isPost(){
 			return $_SERVER['REQUEST_METHOD']=='POST';
 		}

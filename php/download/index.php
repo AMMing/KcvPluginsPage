@@ -1,11 +1,11 @@
 <?php 
 
-	include_once('../core/base.php');
+	include_once('../base.php');
 
 	$key = $http->get("key");
 
 	if($key==NULL){
-		echo "error";
+		echo "not flies.";
 		exit;
 	}
 
@@ -17,12 +17,12 @@
 		$softVersionSql=new softVersionSql();
 		$model=$softVersionSql->getItemBySoftId((int)$model->Id);
 
-		$ip= $http->getIP2();
+		$ip= $http->getIP();
 		$downloadRecordSql=new downloadRecordSql();
 		$downloadRecordSql->addOrUpdate($model->Id,$ip);
 
 		$http->redirect($model->path);
 	}
 
-	echo "error";
+	echo "not flies.";
 ?>
