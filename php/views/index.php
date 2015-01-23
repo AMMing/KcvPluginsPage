@@ -37,7 +37,7 @@
         <div class="top_space"></div>
         <div class="main_content">
             <div class="content_frame">
-                <div class="head">
+                <div class="head" index="1">
                     <div class="bg pic">
                         <div class="title">
                             Tilte
@@ -129,6 +129,14 @@
                     <div class="copyright">Copyright © 2015 <a href="http://kcvp.logs.moe">KanColleViewer Plugins</a></div>
                 </footer>
             </div>
+        </div>
+        <div class="hide_imgs">
+            <div class="hide_img_1"></div>
+            <div class="hide_img_2"></div>
+            <div class="hide_img_3"></div>
+            <div class="hide_img_4"></div>
+            <div class="hide_img_5"></div>
+            <div class="hide_img_6"></div>
         </div>
     </div>
     <script src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>

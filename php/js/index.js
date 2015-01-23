@@ -79,8 +79,8 @@ Kcvp.prototype.Head = function() {
 
             obj.$head_title.css("color", data.color);
             obj.$avatar_title.css("color", data.color);
-            obj.$head_title.html(data.title);
-            obj.$avatar_title.html(data.des);
+            obj.$head_title.html(data.des);
+            obj.$avatar_title.html(data.title);
         });
 
         obj.$avatar.animate({

@@ -11,4 +11,3 @@ if (!window.jQuery) {
 appendjs("/js/jquery.aming.slide.js");
 appendjs("/js/jquery.aming.scrolltop.js");
 appendjs("/js/index.js");
-appendjs("/js/test.js");

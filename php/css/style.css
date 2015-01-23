@@ -297,3 +297,6 @@ article .log_item {
 
 /* article end */
 
+.hide_imgs{
+    display: none;
+}
