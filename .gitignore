@@ -181,3 +181,10 @@ UpgradeLog*.htm
 
 # Microsoft Fakes
 FakesAssemblies/
+
+
+
+
+# my mysql config
+
+php\config.php
