@@ -1,10 +1,14 @@
 <?php 
 
     $pageInfoSql=new pageInfoSql();
-    $page_data=$pageInfoSql->getItem(1);
-
     $logsTableSql=new logsTableSql();
+    $softVersionSql=new softVersionSql();
+    $softSql=new softSql();
+    $functionsTableSql=new functionsTableSql();
+
+    $page_data=$pageInfoSql->getItem(1);
     $logs_list=$logsTableSql->getList();
+    $kcvp_newver=$softVersionSql->getNewVer(1);
 
 ?><!DOCTYPE html>
 <html>
@@ -39,17 +43,22 @@
             <div class="content_frame">
                 <div class="head" index="1">
                     <div class="bg pic">
-                        <div class="title">
-                            Tilte
-                        </div>
+                        <div class="title"></div>
                     </div>
                     <div class="avatar">
                         <div class="img pic">
-                            <div class="title">
-                                MapleWorld
-                            </div>
+                            <div class="title"></div>
                         </div>
                     </div>
+                </div>
+                <div class="bdsharebuttonbox">
+                    <a href="#" class="bds_more" data-cmd="more"></a>
+                    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+                    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+                    <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+                    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
+                    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+                    <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
                 </div>
                 <div class="info">
                     <!-- title -->
@@ -68,20 +77,44 @@
                     <article>
                         <div>
                             <!-- content -->
-                            <?php echo $page_data->content; ?>
+                            <p>
+                                <a class="img" href="#">
+                                    <img src="images/img1.png" alt="插件截图" />
+                                </a>
+                                <a class="img" href="#">
+                                    <img src="images/img2.png" alt="插件截图" />
+                                </a>
+                            </p>
+                            <p>
+                                <strong>下载地址</strong>
+                                <a href="<?php echo $kcvp_newver->url; ?>" target="_blank"><?php echo $kcvp_newver->name; ?></a>
+                                <span class="ver_date">[<?php echo $kcvp_newver->updateDate; ?>]</span>
+                            </p>
+                            <p>
+                                <strong>项目源码</strong>
+                                <a href="https://github.com/AMMing/KcvPlugins" target="_blank">https://github.com/AMMing/KcvPlugins</a>
+                            </p>
+
+                            <div class="mleft30">
+                                <p>KanColleViewer 在3.0版本之后增加了插件功能，可以通过添加插件完善kcv的功能。</p>
+                                <p>本插件在只kcv3.4下测试，其他旧版本理论上可以，(๑•́ ₃ •̀๑) 不过没有测试，使用时最好是用最新的kcv。</p>
+                            </div>
                             <!-- function start -->
                             <h4>主要功能</h4>
                             <?php
-                                $softSql=new softSql();
                                 $soft_list=$softSql->getListNotKcvp();
 
                                 foreach ($soft_list as $soft_item) {
-                                    $functionsTableSql=new functionsTableSql();
+                                    $soft_newver=$softVersionSql->getNewVer($soft_item->Id);
                                     $func_list=$functionsTableSql->getListBySoftId($soft_item->Id);
                             ?>
                             <div>
                                 <ul>
-                                    <li><?php echo $soft_item->name; ?></li>
+                                    <li>
+                                        <?php echo $soft_item->name; ?>
+                                        (<a href="<?php echo $soft_newver->url; ?>">单独下载</a>)
+                                        <span class="ver_date">[<?php echo $soft_newver->updateDate; ?>]</span>
+                                    </li>
                                 </ul>
                                 <ol class="mleft30">
                                 <?php foreach ($func_list as $func_item) { ?>

@@ -106,11 +106,11 @@ jQuery.extend(jQuery.easing, {
             });
 
             $to_top.bind('mouseover', function() {
-                $to_top.css('background', 'url(' + sdata.imgurl + ') 0 -' + sdata.height + 'px');
+                $to_top.css('background-position-y', sdata.height + 'px');
             });
 
             $to_top.bind('mouseout', function() {
-                $to_top.css('background', 'url(' + sdata.imgurl + ')');
+                $to_top.css('background-position-y', '0');
             });
 
             return this;

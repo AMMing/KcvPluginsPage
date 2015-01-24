@@ -125,6 +125,7 @@ body {
 /* Page */
 .content_frame {
     background-color: white;
+    position: relative;
 }
 
     .content_frame > .head {
@@ -236,7 +237,11 @@ footer {
 .cnzz {
     display: none;
 }
-
+.bdsharebuttonbox{
+    position: absolute;
+    right: 5px;
+    top: 125px
+}
 
 /* article start */
 article h4 {
@@ -282,7 +287,9 @@ article ul, ol {
 article ul {
     list-style: square;
 }
-
+article .ver_date {
+    font-size: 12px;
+}
 article .log_item {
     margin: 10px 0;
 }
@@ -299,4 +306,9 @@ article .log_item {
 
 .hide_imgs{
     display: none;
+}
+
+.aming_to_top{
+    border-radius: 25px;
+    border: 5px solid #fff;
 }

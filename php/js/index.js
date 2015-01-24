@@ -179,5 +179,7 @@ $(document).ready(function() {
         mainwidth: 1050
     });
 
-    $('.aming_to_top').css('-webkit-border-radius', '25px');
+    $('article .img').click(function(){
+        return false;
+    });
 });
