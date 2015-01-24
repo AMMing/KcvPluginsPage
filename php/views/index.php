@@ -10,19 +10,19 @@
     $logs_list=$logsTableSql->getList();
     $kcvp_newver=$softVersionSql->getNewVer(1);
 
+    $html = new htmlHelper();
 ?><!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title><?php echo $page_data->headTitle; ?></title>
-    <link rel="shortcut icon" href="icon.jpg">
-    <link href="/css/style.css" rel="stylesheet" />
-    <link href="/data/style.php" rel="stylesheet" />
     <meta name="keywords" content="<?php echo $page_data->headKeyword; ?>" />
     <meta name="Description" content="<?php echo $page_data->headDes; ?>" />
-
-
+    <link rel="shortcut icon" href="/images/icon.jpg">
+    <?php $html->css("/css/style.css"); ?>
+    <?php $html->css("/css/lightbox.css"); ?>
+    <?php $html->css("/data/style.php"); ?>
 </head>
 <body>
     <div class="main">
@@ -78,11 +78,11 @@
                         <div>
                             <!-- content -->
                             <p>
-                                <a class="img" href="#">
-                                    <img src="images/img1.png" alt="插件截图" />
+                                <a class="img" href="images/img1.png" data-lightbox="content-imgs">
+                                    <img src="images/img1_thumb.jpg" alt="插件截图" />
                                 </a>
-                                <a class="img" href="#">
-                                    <img src="images/img2.png" alt="插件截图" />
+                                <a class="img" href="images/img2.png" data-lightbox="content-imgs">
+                                    <img src="images/img2_thumb.jpg" alt="插件截图" />
                                 </a>
                             </p>
                             <p>
@@ -172,10 +172,11 @@
             <div class="hide_img_6"></div>
         </div>
     </div>
-    <script src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
-    <script src="/js/checkjq.js"></script>
+    <input type="hidden" id="hidden_jscssver" value="<?php echo JsCssVer; ?>">
+    <?php $html->js("http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"); ?>
+    <?php $html->js("/js/checkjq.js"); ?>
     <div class="cnzz">
-        <script src="http://s11.cnzz.com/stat.php?id=1254127390&web_id=1254127390" language="JavaScript"></script>
+        <?php $html->js("http://s11.cnzz.com/stat.php?id=1254127390&web_id=1254127390"); ?>
     </div>
 </body>
 </html>

@@ -174,12 +174,9 @@ $(document).ready(function() {
     kcvp.Init();
 
     $(window).aming_scrolltop({
-        imgurl: '/images/totop.png',
+        imgurl: '/images/totop.jpg',
         showopacity: 1,
         mainwidth: 1050
     });
 
-    $('article .img').click(function(){
-        return false;
-    });
 });
