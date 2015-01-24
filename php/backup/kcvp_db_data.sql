@@ -5,7 +5,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50527
 File Encoding         : 65001
 
-Date: 2015-01-24 20:07:45
+Date: 2015-01-24 22:42:40
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -118,9 +118,9 @@ CREATE TABLE `nav_slider` (
 -- ----------------------------
 -- Records of nav_slider
 -- ----------------------------
-INSERT INTO `nav_slider` VALUES ('1', '/images/1.jpg', '0000000000');
-INSERT INTO `nav_slider` VALUES ('2', '/images/2.png', '0000000001');
-INSERT INTO `nav_slider` VALUES ('3', '/images/3.png', '0000000002');
+INSERT INTO `nav_slider` VALUES ('1', '/images/nav1.jpg', '0000000000');
+INSERT INTO `nav_slider` VALUES ('2', '/images/nav2.jpg', '0000000001');
+INSERT INTO `nav_slider` VALUES ('3', '/images/nav3.jpg', '0000000002');
 
 -- ----------------------------
 -- Table structure for page_info
@@ -141,7 +141,7 @@ CREATE TABLE `page_info` (
 -- ----------------------------
 -- Records of page_info
 -- ----------------------------
-INSERT INTO `page_info` VALUES ('1', '提督很忙的拓展插件(KanColleViewer Plugins)', '<p>(σﾟ∀ﾟ)σ网站终于上线了啦！</p>\r\n<p>(๑´ㅂ`๑)好吧只有一个页面，ie 6 7  8 或者用这些ie内核的浏览器可能会看到奇怪的页面 ฅ(๑*д*๑)ฅ!! 浏览器兼容性什么的完全不想去弄。</p>\r\n<p>(๑´ㅂ`๑)请不要吐槽网站太卡打不开什么的，(๑•́ ₃ •̀๑) 没办法一年才100软妹的小霸王虚拟主机，各种烂，国外那些又被墙得厉害ฅ(๑*д*๑)ฅ!!我自己都打不开</p>\r\n<p>页面动画效果有点问题，网络卡的时候会看到奇怪的画面(๑´ㅂ`๑)请不要嫌弃，老夫比较懒直接拿两年前写的来用了，(σﾟ∀ﾟ)σ那个啥 插件比较重要嘛，网页什么的等以后有时间再去弄吧？嗯没错ฅ(๑*д*๑)ฅ</p>', '<p>\r\n<a class=\"img\" href=\"#\">\r\n<img src=\"images/img1.png\" alt=\"插件截图\" />\r\n</a>\r\n<a class=\"img\" href=\"#\">\r\n<img src=\"images/img1.png\" alt=\"插件截图\" />\r\n</a>\r\n</p>\r\n<p>\r\n<strong>下载地址</strong>\r\n<a href=\"https://github.com/AMMing/KcvPlugins/releases/download/1.10/KcvPlugins.Release.Ver1.10.zip\" target=\"_blank\">KcvPlugins.Release.Ver1.10.zip</a>\r\n</p>\r\n<p>\r\n<strong>项目源码</strong>\r\n<a href=\"https://github.com/AMMing/KcvPlugins\" target=\"_blank\">https://github.com/AMMing/KcvPlugins</a>\r\n</p>\r\n\r\n<div class=\"mleft30\">\r\n<p>KanColleViewer 在3.0版本之后增加了插件功能，可以通过添加插件完善kcv的功能。</p>\r\n<p>本插件在只kcv3.4下测试，其他旧版本理论上可以，(๑•́ ₃ •̀๑) 不过没有测试，使用时最好是用最新的kcv。</p>\r\n</div>', '2015-01-20 12:25:21', '提督很忙的拓展插件(KanColleViewer Plugins)', 'KanColleViewer Plugins,KanColleViewer,kcv,kcvp,提督很忙,提督業も忙しい', '提督很忙的拓展插件(KanColleViewer Plugins)');
+INSERT INTO `page_info` VALUES ('1', '提督很忙的拓展插件(KanColleViewer Plugins)', '<p>(σﾟ∀ﾟ)σ网站终于上线了啦！</p>\r\n<p>(๑´ㅂ`๑)好吧只有一个页面，ie 6 7  8 或者用这些ie内核的浏览器可能会看到奇怪的页面 ฅ(๑*д*๑)ฅ!! 浏览器兼容性什么的完全不想去弄。</p>\r\n<p>(๑´ㅂ`๑)请不要吐槽网站太卡打不开什么的，(๑•́ ₃ •̀๑) 没办法一年才100软妹的小霸王虚拟主机，各种烂，国外那些又被墙得厉害ฅ(๑*д*๑)ฅ我自己都打不开</p>\r\n<p>页面动画效果有点问题，网络卡的时候会看到奇怪的画面(๑´ㅂ`๑)请不要嫌弃，老夫比较懒直接拿两年前写的来用了，(σﾟ∀ﾟ)σ那个啥 插件比较重要嘛，网页什么的等以后有时间再去弄对吧？嗯没错ฅ(๑*д*๑)ฅ</p>', '<p>\r\n<a class=\"img\" href=\"#\">\r\n<img src=\"images/img1.png\" alt=\"插件截图\" />\r\n</a>\r\n<a class=\"img\" href=\"#\">\r\n<img src=\"images/img1.png\" alt=\"插件截图\" />\r\n</a>\r\n</p>\r\n<p>\r\n<strong>下载地址</strong>\r\n<a href=\"https://github.com/AMMing/KcvPlugins/releases/download/1.10/KcvPlugins.Release.Ver1.10.zip\" target=\"_blank\">KcvPlugins.Release.Ver1.10.zip</a>\r\n</p>\r\n<p>\r\n<strong>项目源码</strong>\r\n<a href=\"https://github.com/AMMing/KcvPlugins\" target=\"_blank\">https://github.com/AMMing/KcvPlugins</a>\r\n</p>\r\n\r\n<div class=\"mleft30\">\r\n<p>KanColleViewer 在3.0版本之后增加了插件功能，可以通过添加插件完善kcv的功能。</p>\r\n<p>本插件在只kcv3.4下测试，其他旧版本理论上可以，(๑•́ ₃ •̀๑) 不过没有测试，使用时最好是用最新的kcv。</p>\r\n</div>', '2015-01-20 12:25:21', '提督很忙的拓展插件(KanColleViewer Plugins)', 'KanColleViewer Plugins,KanColleViewer,kcv,kcvp,提督很忙,提督業も忙しい', '提督很忙的拓展插件(KanColleViewer Plugins)');
 
 -- ----------------------------
 -- Table structure for soft
@@ -180,11 +180,11 @@ CREATE TABLE `soft_version` (
 -- ----------------------------
 -- Records of soft_version
 -- ----------------------------
-INSERT INTO `soft_version` VALUES ('1', '1', '1.9', '2015-01-18', '/kcv/KcvPlugins.Release.Ver1.9.zip', 'KcvPlugins.Release.Ver1.9.zip');
-INSERT INTO `soft_version` VALUES ('2', '1', '1.10', '2015-01-20', '/kcv/KcvPlugins.Release.Ver1.10.zip', 'KcvPlugins.Release.Ver1.10.zip');
-INSERT INTO `soft_version` VALUES ('3', '3', '1.10', '2015-01-20', '/kcv/SettingsExtensions.Release.Ver1.10.zip', 'SettingsExtensions.Release.Ver1.10.zip');
-INSERT INTO `soft_version` VALUES ('4', '4', '1.1', '2015-01-20', '/kcv/SoundNotifier.Release.Ver1.1.zip', 'SoundNotifier.Release.Ver1.1.zip');
-INSERT INTO `soft_version` VALUES ('5', '5', '1.1', '2015-01-20', '/kcv/WindowsNotifierForWin7.Release.Ver1.1.zip', 'WindowsNotifierForWin7.Release.Ver1.1.zip');
+INSERT INTO `soft_version` VALUES ('1', '1', '1.9', '2015-01-18', '/files/KcvPlugins.Release.Ver1.9.zip', 'KcvPlugins.Release.Ver1.9.zip');
+INSERT INTO `soft_version` VALUES ('2', '1', '1.10', '2015-01-20', '/files/KcvPlugins.Release.Ver1.10.zip', 'KcvPlugins.Release.Ver1.10.zip');
+INSERT INTO `soft_version` VALUES ('3', '3', '1.10', '2015-01-20', '/files/SettingsExtensions.Release.Ver1.10.zip', 'SettingsExtensions.Release.Ver1.10.zip');
+INSERT INTO `soft_version` VALUES ('4', '4', '1.1', '2015-01-20', '/files/SoundNotifier.Release.Ver1.1.zip', 'SoundNotifier.Release.Ver1.1.zip');
+INSERT INTO `soft_version` VALUES ('5', '5', '1.1', '2015-01-20', '/files/WindowsNotifierForWin7.Release.Ver1.1.zip', 'WindowsNotifierForWin7.Release.Ver1.1.zip');
 
 -- ----------------------------
 -- Table structure for version_info

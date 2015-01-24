@@ -259,8 +259,7 @@ article .img {
 }
 
 article img {
-    max-width: 48%;
-    height: auto;
+    height: 150px;
     margin: 0 auto;
 }
 
