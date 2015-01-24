@@ -15,6 +15,7 @@
 	include_once(ROOT_PATH.'/models/page_info.php');
 	// helper
 	include_once(ROOT_PATH.'/helper/http_helper.php');
+	include_once(ROOT_PATH.'/helper/html_helper.php');
 	// sql helper
 	include_once(ROOT_PATH.'/sqlhelper/helper.php');
 	include_once(ROOT_PATH.'/sqlhelper/soft.php');
