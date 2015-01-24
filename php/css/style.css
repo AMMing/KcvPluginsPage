@@ -144,7 +144,7 @@ body {
             left: 0;
             height: 120px;
             width: 100%;
-            background-position:0 -50px;
+            background-position: -4px -54px;
         }
 
             .content_frame > .head .bg .title {
@@ -211,15 +211,12 @@ body {
         }
 
 .brief {
-    padding: 20px 10px 20px 20px;
+    padding: 20px;
     border-bottom: 1px solid #EAEAEA;
     -moz-box-shadow: 0 0 30px rgba(0, 0, 0, 0.05) inset;
     -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.05) inset;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.05) inset;
     display: block;
-}
-.brief p{
-    margin-bottom: 10px;
 }
 
 .content {
@@ -312,6 +309,6 @@ article .log_item {
 }
 
 .aming_to_top{
-    border-radius: 20px;
-    border: 4px solid #fff;
+    border-radius: 25px;
+    border: 5px solid #fff;
 }

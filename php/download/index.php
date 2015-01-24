@@ -5,7 +5,7 @@
 	$key = $http->get("key");
 
 	if($key==NULL){
-		echo "not flie.";
+		echo "not flies.";
 		exit;
 	}
 
@@ -24,5 +24,5 @@
 		$http->redirect($model->path);
 	}
 
-	echo "not flie.";
+	echo "not flies.";
 ?>

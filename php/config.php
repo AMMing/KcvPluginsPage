@@ -1,6 +1,6 @@
 <?php 
 
 	// data file path
-	define('JsCssVer', '20150124');
+	define('JsVer', '20150119');
 
 ?>
