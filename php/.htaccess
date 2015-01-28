@@ -1,0 +1,3 @@
+RewriteEngine On
+
+RewriteRule ^(.*)/([a-z0-9A-Z]+).zip$ $1/download/index.php?key=$2;

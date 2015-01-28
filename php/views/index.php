@@ -9,6 +9,7 @@
     $page_data=$pageInfoSql->getItem(1);
     $logs_list=$logsTableSql->getList();
     $kcvp_newver=$softVersionSql->getNewVer(1);
+    $downloadurl='/download/index.php?key=kcvp';
 
     $html = new htmlHelper();
 ?><!DOCTYPE html>
@@ -96,7 +97,7 @@
                             </p>
                             <p>
                                 <strong>下载地址</strong>
-                                <a href="<?php echo $kcvp_newver->url; ?>" target="_blank"><?php echo $kcvp_newver->name; ?></a>
+                                <a href="<?php echo $downloadurl; ?>" target="_blank"><?php echo $kcvp_newver->name; ?></a>
                                 <span class="ver_date">[<?php echo $kcvp_newver->updateDate; ?>]</span>
                             </p>
                             <p>
@@ -115,13 +116,14 @@
 
                                 foreach ($soft_list as $soft_item) {
                                     $soft_newver=$softVersionSql->getNewVer($soft_item->Id);
+                                    $downloadurl='/download/index.php?key='.$soft_item->key;
                                     $func_list=$functionsTableSql->getListBySoftId($soft_item->Id);
                             ?>
                             <div>
                                 <ul>
                                     <li>
                                         <?php echo $soft_item->name; ?>
-                                        (<a href="<?php echo $soft_newver->url; ?>">单独下载</a>)
+                                        (<a href="<?php echo $downloadurl; ?>">单独下载</a>)
                                         <span class="ver_date">[<?php echo $soft_newver->updateDate; ?>]</span>
                                     </li>
                                 </ul>
