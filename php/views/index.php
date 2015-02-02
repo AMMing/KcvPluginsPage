@@ -168,6 +168,12 @@
                             <!--logs end-->
                         </div>
                     </article>
+                    <div class="msgboard">
+                        <!-- UY BEGIN -->
+                        <div id="uyan_frame"></div>
+                        <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=1596601"></script>
+                        <!-- UY END -->
+                    </div>
                 </div>
                 <footer>
                     <div class="copyright">Copyright © 2015 <a href="http://kcvp.logs.moe">KanColleViewer Plugins</a></div>
