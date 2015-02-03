@@ -51,7 +51,7 @@
             if(!is_int($id)){
             	return null;
             }
-			$sqlstr= "SELECT * FROM `soft_version` WHERE `soft_id`='$id' ORDER BY `ver` ASC LIMIT 1";
+			$sqlstr= "SELECT * FROM `soft_version` WHERE `soft_id`='$id' ORDER BY `update_date` DESC LIMIT 1";
 			$result= $this->sqlhelper->getItem($sqlstr);
 			if($result==NULL){
             	return null;

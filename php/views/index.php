@@ -80,19 +80,25 @@
                             <!-- content -->
                             <p>
                                 <a class="img" href="/images/content/img1.png" data-lightbox="content-imgs" data-title="主要设置界面1">
-                                    <img src="/images/content/img1_t.png" alt="插件截图" />
+                                    <img src="/images/content/img1_t.png" alt="主要设置界面1" />
                                 </a>
                                 <a class="img" href="/images/content/img2.png" data-lightbox="content-imgs" data-title="主要设置界面2">
-                                    <img src="/images/content/img2_t.png" alt="插件截图" />
+                                    <img src="/images/content/img2_t.png" alt="主要设置界面2" />
                                 </a>
                                 <a class="img" href="/images/content/img3.png" data-lightbox="content-imgs" data-title="快捷键设置界面">
-                                    <img src="/images/content/img3_t.png" alt="插件截图" />
+                                    <img src="/images/content/img3_t.png" alt="快捷键设置界面" />
                                 </a>
                                 <a class="img" href="/images/content/img4.png" data-lightbox="content-imgs" data-title="肝船用的迷你窗口">
-                                    <img src="/images/content/img4_t.png" alt="插件截图" />
+                                    <img src="/images/content/img4_t.png" alt="肝船用的迷你窗口" />
                                 </a>
                                 <a class="img" href="/images/content/img5.png" data-lightbox="content-imgs" data-title="托盘右键菜单">
-                                    <img src="/images/content/img5_t.png" alt="插件截图" />
+                                    <img src="/images/content/img5_t.png" alt="托盘右键菜单" />
+                                </a>
+                                <a class="img" href="/images/content/img6.png" data-lightbox="content-imgs" data-title="大破警告">
+                                    <img src="/images/content/img6_t.png" alt="大破警告" />
+                                </a>
+                                <a class="img" href="/images/content/img7.png" data-lightbox="content-imgs" data-title="大破警告设置界面">
+                                    <img src="/images/content/img7_t.png" alt="大破警告设置界面" />
                                 </a>
                             </p>
                             <p>
