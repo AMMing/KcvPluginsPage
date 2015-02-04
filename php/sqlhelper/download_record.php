@@ -85,5 +85,28 @@
             	$this->addItem($verId,$ip);
             }
 		}
+
+		function getDownloadCount(){
+			$sqlstr= "SELECT `soft_version`.`name`,COUNT(*) AS `count` FROM `soft_version` LEFT JOIN `download_record` ON `download_record`.`ver_id`=`soft_version`.`Id` GROUP BY `soft_version`.`soft_id`";
+			$result= $this->sqlhelper->getList($sqlstr);
+			$list= array();
+			foreach ($result as $item) {
+				$model = new downloadCountModel($item);
+				array_push($list, $model);
+			}
+
+			return $list;
+		}
+		function getDownloadCountAll(){
+			$sqlstr= "SELECT `soft_version`.`name`,COUNT(*) AS `count` FROM `soft_version` LEFT JOIN `download_record` ON `download_record`.`ver_id`=`soft_version`.`Id` GROUP BY `soft_version`.`Id`";
+			$result= $this->sqlhelper->getList($sqlstr);
+			$list= array();
+			foreach ($result as $item) {
+				$model = new downloadCountModel($item);
+				array_push($list, $model);
+			}
+
+			return $list;
+		}
 	}
 ?>

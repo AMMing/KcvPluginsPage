@@ -13,6 +13,7 @@
 	include_once(ROOT_PATH.'/models/functions_table.php');
 	include_once(ROOT_PATH.'/models/logs_table.php');
 	include_once(ROOT_PATH.'/models/page_info.php');
+	include_once(ROOT_PATH.'/models/download_count.php');
 	// helper
 	include_once(ROOT_PATH.'/helper/http_helper.php');
 	include_once(ROOT_PATH.'/helper/html_helper.php');
