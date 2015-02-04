@@ -12,5 +12,8 @@
 		function js($url){
 			echo '<script src="'.$url.'?ver='.JsCssVer.'"></script>';
 		}
+		function downloadUrl($key){
+			return '/'.$key.'.zip';
+		}
 	}
 ?>
