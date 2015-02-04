@@ -226,7 +226,7 @@ body {
     padding: 20px 30px;
 }
 
-footer {
+.footer {
     font-size: 12px;
     line-height: 18px;
     padding: 10px 0;
@@ -247,23 +247,23 @@ footer {
 }
 
 /* article start */
-article h4 {
+.article h4 {
     line-height: 24px;
     margin-bottom: 15px;
     font-size: 16px;
     font-weight: bold;
 }
 
-article .img {
+.article .img {
     vertical-align: baseline;
 }
 
-article img {
+.article img {
     height: 150px;
     margin: 0 auto;
 }
 
-    article img:hover {
+    .article img:hover {
         opacity: 0.8;
         filter: alpha(opacity=80);
         -moz-box-shadow: #000 0 0 0;
@@ -271,36 +271,36 @@ article img {
         box-shadow: #000 0 0 0;
     }
 
-article p {
+.article p {
     line-height: 24px;
     margin-bottom: 15px;
     font-size: 16px;
 }
 
-article strong {
+.article strong {
     font-weight: bold;
 }
 
-article ul, ol {
+.article ul, ol {
     padding: 0 0 0 35px;
     margin-bottom: 30px;
 }
 
-article ul {
+.article ul {
     list-style: square;
 }
-article .ver_date {
+.article .ver_date {
     font-size: 12px;
 }
-article .log_item {
+.article .log_item {
     margin: 10px 0;
 }
 
-    article .log_item .title {
+    .article .log_item .title {
         margin-left: 30px;
     }
 
-    article .log_item .info {
+    .article .log_item .info {
         margin: 20px 0 30px 60px;
     }
 

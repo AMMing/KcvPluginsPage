@@ -75,7 +75,7 @@
                     <?php echo $page_data->brief; ?>
                 </div>
                 <div class="content">
-                    <article>
+                    <div class="article">
                         <div>
                             <!-- content -->
                             <p>
@@ -173,7 +173,7 @@
                             <?php } ?>
                             <!--logs end-->
                         </div>
-                    </article>
+                    </div>
                     <div class="msgboard">
                         <!-- UY BEGIN -->
                         <div id="uyan_frame"></div>
@@ -181,9 +181,9 @@
                         <!-- UY END -->
                     </div>
                 </div>
-                <footer>
+                <div class="footer">
                     <div class="copyright">Copyright © 2015 <a href="http://kcvp.logs.moe">KanColleViewer Plugins</a></div>
-                </footer>
+                </div>
             </div>
         </div>
         <div class="hide_imgs">
