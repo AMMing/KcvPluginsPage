@@ -77,7 +77,7 @@ jQuery.extend(jQuery.easing, {
                 width: '100%',
                 height: '0',
                 position: 'fixed',
-                bottom: '0',
+                bottom: '25px',
                 left: '0',
                 zIndex: '10000000000000000'
             });

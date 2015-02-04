@@ -175,10 +175,7 @@
                         </div>
                     </div>
                     <div class="msgboard">
-                        <!-- UY BEGIN -->
-                        <div id="uyan_frame"></div>
-                        <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=1596601"></script>
-                        <!-- UY END -->
+                        <?php $html->views('msgboard'); ?>
                     </div>
                 </div>
                 <div class="footer">

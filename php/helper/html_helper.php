@@ -15,5 +15,8 @@
 		function downloadUrl($key){
 			return '/'.$key.'.zip';
 		}
+		function views($name){
+			include_once(ROOT_PATH.'/views/'.$name.'.php');
+		}
 	}
 ?>

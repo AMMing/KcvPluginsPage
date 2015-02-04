@@ -309,7 +309,9 @@ body {
 .hide_imgs{
     display: none;
 }
-
+.aming_totop_frame{
+    bottom: 25px;
+}
 .aming_to_top{
     border-radius: 20px;
     border: 4px solid #fff;
