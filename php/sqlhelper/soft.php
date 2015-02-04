@@ -49,7 +49,7 @@
 			return $model;
 		}
 		function getListNotKcvp(){
-			$sqlstr= "SELECT * FROM `soft`WHERE `key` <> 'kcvp'";
+			$sqlstr= "SELECT * FROM `soft`WHERE `key` <> 'kcvp' ORDER BY `order` ASC";
 			$result= $this->sqlhelper->getList($sqlstr);
 			$list= array();
 			foreach ($result as $item) {
