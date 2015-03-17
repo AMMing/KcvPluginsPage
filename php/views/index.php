@@ -71,8 +71,17 @@
                     <div class="clear"></div>
                 </div>
                 <div class="brief">
+	                <div>
+	                	<p style="color:red;">注意！！！本插件除了kcv自带的插件之外不保证跟其他第三的插件兼容，混合使用时请注意</p>
+	                	<p style="color:red;">目前已知会冲突的插件有“KCV.Landscape.dll”，“KCV.ViewRangeCalc.dll”</p>
+	                </div>
+	                <br>
                     <!-- brief -->
                     <?php echo $page_data->brief; ?>
+                    <div style="float:right;font-size: 14px;">
+                    	有什么问题可以下面留言或者发送到我的邮箱：<a href="mailto:amming@outlook.com">amming@outlook.com</a>
+                    </div>
+                    <div class="clear"></div>
                 </div>
                 <div class="content">
                     <div class="article">
@@ -144,6 +153,11 @@
                             <h4>使用方法</h4>
                             <ul>
                                 <li>将解压出来的dll放到kcv的Plugins目录下然后重启kcv，如果失败的话右键dll属性看看有个没有个什么什么锁定的 把那个解锁掉再重启kcv</li>
+                            </ul>
+                            <h4>注意事项</h4>
+                            <ul>
+                                <li>“AMing.Plugins.Core.dll”为核心组件不可删除</li>
+                                <li>本插件除了kcv自带的插件之外不保证跟其他第三的插件兼容，混合使用时请注意</li>
                             </ul>
                             <h4>参考项目</h4>
                             <ul>
