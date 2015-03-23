@@ -17,10 +17,10 @@ RewriteRule ^(.*)$ /amm/$1
 RewriteCond %{HTTP_HOST} ^(www.)?amm.moe$
 RewriteRule ^(/)?$ amm/index.php [L]
 
-RewriteCond %{HTTP_HOST} ^(www.)?api.amm.moe$
+RewriteCond %{HTTP_HOST} ^(www.)?api.logs.moe$
 RewriteCond %{REQUEST_URI} !^/api/
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ /api/$1
-RewriteCond %{HTTP_HOST} ^(www.)?api.amm.moe$
+RewriteCond %{HTTP_HOST} ^(www.)?api.logs.moe$
 RewriteRule ^(/)?$ api/index.php [L]
