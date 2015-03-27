@@ -1,7 +1,7 @@
 <?php  
 
 	/**
-	* softModel
+	* logsTableModel
 	*/
 	class logsTableModel
 	{

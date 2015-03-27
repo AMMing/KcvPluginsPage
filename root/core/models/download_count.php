@@ -1,7 +1,7 @@
 <?php  
 
 	/**
-	* softModel
+	* downloadCountModel
 	*/
 	class downloadCountModel
 	{

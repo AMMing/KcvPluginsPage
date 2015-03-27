@@ -1,7 +1,7 @@
 <?php  
 
 	/**
-	* softModel
+	* functionsTableModel
 	*/
 	class functionsTableModel
 	{

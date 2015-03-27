@@ -1,7 +1,7 @@
 <?php  
 
 	/**
-	* softModel
+	* downloadRecordModel
 	*/
 	class downloadRecordModel
 	{

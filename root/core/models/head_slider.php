@@ -1,7 +1,7 @@
 <?php  
 
 	/**
-	* softModel
+	* headSliderModel
 	*/
 	class headSliderModel
 	{

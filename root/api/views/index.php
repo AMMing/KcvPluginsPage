@@ -1,13 +1,10 @@
 <?php 
+    header("Content-Type: text/html; charset=utf-8");
 
-	include_once('base.php');
-
-	// $http->views('index');
-	
     $shipTypesSql=new shipTypesSql();
     $html = new htmlHelper();
 
     $shipTypes_list=$shipTypesSql->getList();
 
     $http->json($shipTypes_list);
- ?>
+?>

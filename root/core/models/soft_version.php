@@ -1,7 +1,7 @@
 <?php  
 
 	/**
-	* softModel
+	* softVersionModel
 	*/
 	class softVersionModel
 	{

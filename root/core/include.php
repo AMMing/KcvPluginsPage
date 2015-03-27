@@ -14,6 +14,12 @@
 	include_once(CORE_PATH.'/models/logs_table.php');
 	include_once(CORE_PATH.'/models/page_info.php');
 	include_once(CORE_PATH.'/models/download_count.php');
+	include_once(CORE_PATH.'/models/expedition_info.php');
+	include_once(CORE_PATH.'/models/expedition_ship_types.php');
+	include_once(CORE_PATH.'/models/ship_types.php');
+	include_once(CORE_PATH.'/models/area_table.php');
+	include_once(CORE_PATH.'/models/expedition_ship.php');
+	include_once(CORE_PATH.'/models/data_version.php');
 	// helper
 	include_once(CORE_PATH.'/helper/http_helper.php');
 	include_once(CORE_PATH.'/helper/html_helper.php');
@@ -28,5 +34,10 @@
 	include_once(CORE_PATH.'/sqlhelper/functions_table.php');
 	include_once(CORE_PATH.'/sqlhelper/logs_table.php');
 	include_once(CORE_PATH.'/sqlhelper/page_info.php');
+	include_once(CORE_PATH.'/sqlhelper/ship_types.php');
+	include_once(CORE_PATH.'/sqlhelper/area_table.php');
+	include_once(CORE_PATH.'/sqlhelper/expedition_info.php');
+	include_once(CORE_PATH.'/sqlhelper/expedition_ship_types.php');
+	include_once(CORE_PATH.'/sqlhelper/data_version.php');
 
 ?>
