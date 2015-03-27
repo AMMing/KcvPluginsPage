@@ -13,10 +13,16 @@
 
 
 
-    $sql=new dataVersionSql();
-    $html = new htmlHelper();
-	$sql->updateItem(1);
-    $list=$sql->getList();
+ //    $sql=new dataVersionSql();
+ //    $html = new htmlHelper();
+	// // $sql->updateItemVer(1,'1.0');
+ //    $list=$sql->getList();
 
-    $http->json($list);
+ //    $http->json($list);
+
+
+    $cache=new cacheMethod();
+    $result=$cache->get();
+
+    $http->json($result);
  ?>

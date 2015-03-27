@@ -1,0 +1,3 @@
+RewriteEngine On
+
+RewriteRule ^/api/([a-z0-9A-Z]+).json$ /kc/api/$1.php
