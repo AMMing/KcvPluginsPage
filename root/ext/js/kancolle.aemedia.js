@@ -1,3 +1,81 @@
+var KancolleExt = function() {
+    var obj = this;
+    /*判断是否有横幅改变分区icon的样式*/
+    this.setPageLogo = function() {
+        jQuery('#ct>img').remove();
+        var $div = jQuery('#ct .t9_cle:first+div[class^="t9_"]');
+        if ($div.length > 0) {
+            $div.find('div').css({
+                top: 5,
+                left: 10
+            });
+            $div.find('img').css({
+                width: 115,
+                height: 115
+            });
+        }
+        jQuery('.bm.bml.pbn>div:first').css('padding-left', '140px');
+    };
+    /*替换顶部导航栏的消息地址为帖子消息*/
+    this.setNavMsg = function() {
+        jQuery('.t9_02 a').attr('href', 'http://kancolle.aemedia.org/home.php?mod=space&do=notice&view=mypost');
+        jQuery('#t9_forumlist_btn').attr('href', '/');
+    };
+    /*移除水b排行榜和最新会员榜的posts和date*/
+    this.setTopList = function() {
+        var $emlist = jQuery('#portal_block_38_content em,#portal_block_37_content em');
+        jQuery.each($emlist, function() {
+            var $this = jQuery(this);
+            var html = $this.html();
+            html = html.replace('date:', '');
+            html = html.replace('posts:', '');
+            $this.html(html);
+        });
+    };
+    /*停止顶部文章列表自动跳转tab*/
+    this.stopAutoChangeTab = function() {
+        clearTimeout(tabTimer);
+    };
+    /* 设置导航栏 */
+    this.setNavIcons = function() {
+        var $navs = jQuery('.t9_n.wp ul');
+        var $menu = jQuery('#toptb .t9_03').parent();
+        console.log($navs);
+        console.log($menu);
+        $navs.find('li:first').remove();
+        var $lis = $navs.find('li').clone();
+
+        $lis.css({
+            'overflow': 'hidden'
+        });
+        $lis.find('img').css({
+            'display': 'block',
+            'margin': '8px 0 0 6px',
+            'width': '34px',
+            'height': '34px',
+            'borderRadius': '3px'
+        });
+        $lis.find('a').css({
+            'fontSize: 0;': '0'
+        });
+        $lis.find('a').attr('target', '_self');
+        var t9_01 = $menu.find('.t9_01');
+        t9_01.before($lis);
+        jQuery('#scbar').hide();
+
+        jQuery('.t9_forumlist_btn').unbind('click');
+    };
+    this.init = function() {
+        this.setPageLogo();
+        this.setNavMsg();
+        this.setTopList();
+        this.stopAutoChangeTab();
+
+        setTimeout(obj.setNavIcons, 2000);
+    }
+};
+
+
 var KancolleList = function() {
     var obj = this;
     obj.getItemInfo = function(val) {
@@ -269,69 +347,163 @@ var KancolleList = function() {
     };
 
 };
+var KancolleCurrentExpression = function() {
+    var obj = this;
+    var $ = jQuery;
+    obj.$imgdiv = null;
+    obj.imglist = [
+        'http://ww4.sinaimg.cn/large/005X3pWTjw1ep9sstew0ej301f01k742.jpg',
+        'http://ww2.sinaimg.cn/large/005X3q9sjw1ep9vpewuhfj302j036glg.jpg',
+        'http://ww1.sinaimg.cn/large/005X4kHAjw1ep9sp2x7lvj304b04g3yi.jpg',
+        'http://ww2.sinaimg.cn/large/dabbd266jw1eqdixk5nqsj201c01c3yi.jpg',
+        'http://ww1.sinaimg.cn/large/dabbd266jw1eqo1cciyt7j20b40awjrr.jpg'
+    ];
 
+    obj.createBtn = function() {
+        var a = $('<a id="e_current_sml" title="自定义表情" href="javascript:;" initialized="true">自定义表情</a>');
+        a.css({
+            backgroundPosition: '-3px -80px'
+        });
+
+        return a;
+    };
+    obj.createImageList = function() {
+        var div = $('<div></div>');
+        div.addClass('current_imgs_div');
+        var close = $('<div></div>');
+        close.addClass('close');
+        div.append(close);
+        var ul = $('<ul></ul>');
+        div.append(ul);
+
+        $.each(obj.imglist, function(index, val) {
+            var item = obj.createItem(val);
+            ul.append(item);
+        });
+
+        return div;
+    };
+    obj.createItem = function(url) {
+        var li = $('<li></li>');
+        var img = new Image();
+        img.src = url;
+        li.append(img);
+
+        return li;
+    };
+    obj.bindEventByButton = function($obj) {
+        $obj.bind('click', function() {
+            if (obj.$imgdiv.css('display') == 'none') {
+                var p = $(this).offset();
+                obj.showDiv(p);
+            } else {
+                obj.hideDiv();
+            }
+        });
+    };
+
+    obj.hasEdit = function() {
+        var $edit = $('#e_body');
+
+        return $edit.length > 0;
+    };
+
+    obj.setCss = function(div) {
+        div.css({
+            width: '530px',
+            height: '300px',
+            border: '1px solid #ccc',
+            position: 'absolute',
+            background: '#eee',
+            display: 'none',
+            top: '0',
+            left: '0'
+        });
+        div.find('ul').css({
+            width: '520px',
+            height: '270px',
+            margin: '25px 5px 5px 5px',
+            overflow: 'scroll',
+            padding: '0'
+        });
+        div.find('li').css({
+            listStyle: 'none',
+            float: 'left',
+            width: '50px',
+            height: '50px',
+            margin: '5px',
+            border: '1px solid #ccc',
+            textAlign: 'center',
+            cursor: 'pointer',
+            background: '#fff'
+        });
+        div.find('li img').css({
+            height: '50px'
+        });
+        div.find('.close').css({
+            width: '20px',
+            height: '20px',
+            position: 'absolute',
+            background: '#FF0',
+            top: '4px',
+            right: '5px',
+            cursor: 'pointer',
+            background: 'url(http://kancolle.aemedia.org/./template/999test_cn_img/dz_model_15020401/common/cls.gif) no-repeat 0 0'
+        });
+    };
+    obj.bindEventByImagelist = function(div) {
+        div.find('li').bind('click', function() {
+            var url = $(this).find('img').attr('src');
+            if (!!url) {
+                insertText('<img src="' + url + '" border="0"  alt="" />', false);
+                obj.hideDiv();
+            }
+        });
+        div.find('.close').bind('click', function() {
+            obj.hideDiv();
+        });
+    };
+    obj.showDiv = function(p) {
+        obj.$imgdiv.css({
+            top: p.top + 50,
+            left: p.left - 100
+        });
+        obj.$imgdiv.show();
+    };
+    obj.hideDiv = function() {
+        obj.$imgdiv.hide();
+    };
+    obj.appendToBody = function() {
+        if ($('.current_imgs_div').length > 0) return;
+
+        $('body').append(obj.$imgdiv);
+    };
+
+    obj.init = function() {
+        alert(111);
+        if (!obj.hasEdit()) return;
+
+        var btn = obj.createBtn();
+        $('#e_body #e_sml').after(btn);
+        obj.bindEventByButton(btn);
+
+        var imgdiv = obj.createImageList();
+        obj.setCss(imgdiv);
+        obj.bindEventByImagelist(imgdiv);
+
+        obj.$imgdiv = imgdiv;
+        obj.appendToBody();
+    };
+
+};
+
+
+
+var kancolleExt = new KancolleExt();
 var kancolleList = new KancolleList();
-
-
+var kancolleCurrentExpression = new KancolleCurrentExpression();
 jQuery(function() {
+    kancolleExt.init();
     kancolleList.init();
-    /*判断是否有横幅改变分区icon的样式*/
-    if (jQuery('#ct>img').length == 0) {
-        var $div = jQuery('#ct .t9_cle:first+div[class^="t9_"]');
-        if ($div.length > 0) {
-            $div.find('div').css({
-                top: 5,
-                left: 10
-            });
-            $div.find('img').css({
-                width: 115,
-                height: 115
-            });
-        }
-        jQuery('.bm.bml.pbn>div:first').css('padding-left', '140px');
-    }
-
-    /*替换顶部导航栏的消息地址为帖子消息*/
-    jQuery('.t9_02 a').attr('href', 'http://kancolle.aemedia.org/home.php?mod=space&do=notice&view=mypost');
-    jQuery('#t9_forumlist_btn').attr('href', '/');
-
-
-    /*移除水b排行榜和最新会员榜的posts和date*/
-    var $emlist = jQuery('#portal_block_38_content em,#portal_block_37_content em');
-    jQuery.each($emlist, function() {
-        var $this = jQuery(this);
-        var html = $this.html();
-        html = html.replace('date:', '');
-        html = html.replace('posts:', '');
-        $this.html(html);
-    });
-    /*停止顶部文章列表自动跳转tab*/
-    clearTimeout(tabTimer);
-
-
-
-    /* 设置导航栏 */
-    var $navs = jQuery('.t9_n.wp ul');
-    var $menu = jQuery('#toptb .t9_03').parent();
-    $navs.find('li:first').remove();
-    var $lis = $navs.find('li').clone();
-
-    $lis.css({
-        'overflow': 'hidden'
-    });
-    $lis.find('img').css({
-        'display': 'block',
-        'margin': '8px 0 0 6px',
-        'width': '34px',
-        'height': '34px',
-        'borderRadius': '3px'
-    });
-    $lis.find('a').css({
-        'fontSize: 0;': '0'
-    });
-    var t9_01 = $menu.find('.t9_01');
-    t9_01.before($lis);
-    jQuery('#scbar').hide();
-
-    jQuery('.t9_forumlist_btn').unbind('click');
+    kancolleCurrentExpression.init();
 });

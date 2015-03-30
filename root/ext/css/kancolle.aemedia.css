@@ -6,8 +6,7 @@
 #wp .tl div.bm_c {
   padding: 0;
 }
-#wp .bm_c tbody .common,
-#wp .bm_c tbody .new>span {
+#wp .bm_c tbody .common, #wp .bm_c tbody .new>span {
   padding-left: 10px;
 }
 
@@ -25,17 +24,19 @@
 #wp .pls .o .pm2 {
   width: 100px;
 }
+
 /*隐藏焦点图片tab选项*/
 #wp #portal_block_39 {
   display: none;
 }
+
 /*右侧版主样式*/
 #wp .bm_c li {
   margin: 0 18px 10px 0;
 }
 
 /*水b榜和新人榜样式*/
-#wp #framellsuK8 li a,#wp #frameEii640 li a {
+#wp #framellsuK8 li a, #wp #frameEii640 li a {
   display: block;
   float: left;
   width: 100px;
@@ -43,9 +44,10 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-#wp #framellsuK8 li a{
+#wp #framellsuK8 li a {
   width: 80px;
 }
+
 /*固定顶部导航栏*/
 .t9_top {
   background: none;
@@ -57,11 +59,11 @@
 #wp {
   margin-top: 50px;
 }
+
 /*分区下面的面包屑导航样式*/
-#wp .bm_c.cl.pbn>div:first-child{
+#wp .bm_c.cl.pbn>div:first-child {
   padding-left: 0;
 }
-
 
 /*设置帖子列表上面分类的样式*/
 #threadlist .tf {
@@ -69,29 +71,29 @@
   line-height: 21px;
   position: relative;
 }
-#threadlist .tf a{
+#threadlist .tf a {
   font-size: 12px;
   padding: 0 10px 0 0;
   background: transparent;
 }
-#atarget{
-  float:none;
+#atarget {
+  float: none;
   position: absolute;
   bottom: 5px;
   right: 0;
 }
 
 /*移除空的帖子item*/
-.emptb{
+.emptb {
   display: none;
 }
 
 /*移除导航上面无用的收藏按钮*/
-#toptb .t9_03{
+#toptb .t9_03 {
   display: none;
 }
 
 /*移除首页更多按钮*/
-#toptb .t9_more{
+#toptb .t9_more {
   display: none;
 }
