@@ -198,7 +198,7 @@ var KancolleList = function() {
         ul.find('li .landlord ').css({
             width: '100px',
             top: '90px',
-            color: '#F90',
+            // color: '#F90',
             overflow: 'hidden',
             textOverflow: 'ellipsis',
             whiteSpace: 'nowrap'
