@@ -48,6 +48,8 @@
 		public $SumLevel;
 		//旗舰等级
 		public $FlagshipLevel;
+		//旗舰类型
+		public $FlagshipType;
 		//需要多少艘船
 		public $ShipCount;
 		//需要带缶的数量
@@ -89,6 +91,7 @@
 			$this->GetFurnitureBig=$row['get_furniture_big'];
 			$this->SumLevel=(int)$row['sum_level'];
 			$this->FlagshipLevel=(int)$row['flagship_level'];
+			$this->FlagshipType=(int)$row['flagship_type'];
 			$this->ShipCount=(int)$row['ship_count'];
 			$this->BarrelCount=(int)$row['barrel_count'];
 			$this->BarrelShipCount=(int)$row['barrel_ship_count'];

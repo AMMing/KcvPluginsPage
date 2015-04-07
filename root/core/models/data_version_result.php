@@ -15,6 +15,8 @@
 
 		public $Remark;
 
+		public $From;
+
 		public $Data;
 	}
 ?>

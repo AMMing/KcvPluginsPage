@@ -59,7 +59,9 @@
 			$data=json_decode($json);
 			if(!$this->DataIsNew($data)){
 				$data=$this->getBySql();
+		    	$data->From='Cache';
 				$json=json_encode($data);
+		    	$data->From='DataBase';
 				$this->saveToFile($json);
 			}
 

@@ -21,5 +21,8 @@ var Tools = {
 		document.body.appendChild(link);
 
 		return link;
+	},
+	uie: function(tag) {
+		return document.createElement(tag);
 	}
 };
