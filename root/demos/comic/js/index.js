@@ -3,11 +3,13 @@ var Slider = function() {
 	obj.count = 0;
 	obj.index = 0;
 	obj.images = [];
-	obj.time = 3000;
+	obj.time = 2000;
 	obj.width = 1000;
+	obj.minwidth = 206;
 	obj.list = null;
 	obj.thumblist = null;
 	obj.timer = null;
+	obj.open_newtab = true;
 
 	obj.next = function() {
 		var newindex = obj.index + 1;
@@ -35,7 +37,7 @@ var Slider = function() {
 		obj.stopauto();
 		obj.list.stop().animate({
 			left: left
-		}, '800', obj.startauto);
+		}, 1000, 'easeInOutQuart', obj.startauto);
 		obj.set_current();
 	};
 	obj.stopauto = function() {
@@ -68,6 +70,9 @@ var Slider = function() {
 	obj.add_imgdiv = function(url, link) {
 		var a = obj.uie('a');
 		a.attr('href', link);
+		if (!!obj.open_newtab) {
+			a.attr('target', '_blank');
+		}
 		var div = obj.uie('div');
 		a.append(div);
 		var img = new Image();
@@ -87,11 +92,11 @@ var Slider = function() {
 		obj.bindthumbevent(div);
 	};
 	obj.set_current = function() {
-		$('.content .slider .mini .list>div').removeClass('current');
-		$('.content .slider .mini .list>div[data-index="' + obj.index + '"]').addClass('current');
+		$('.slider .mini .list>div').removeClass('current');
+		$('.slider .mini .list>div[data-index="' + obj.index + '"]').addClass('current');
 	};
 	obj.setThumbDivWidth = function() {
-		$('.slider .mini').width(obj.count * 202);
+		$('.slider .mini').width(obj.count * obj.minwidth);
 	};
 
 
@@ -109,8 +114,10 @@ var Slider = function() {
 	};
 };
 
+
+
 var slider = null;
-Tools.appendJs('http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js', function() {
+jQuery(document).ready(function($) {
 	slider = new Slider();
 	slider.images = [{
 		thumb: 'http://kcvp-logs-moe-static.smartgslb.com/images/head/1.jpg',
@@ -135,4 +142,17 @@ Tools.appendJs('http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js', fun
 	}];
 	slider.init();
 	slider.startauto();
+
+
+	jQuery(window).bind('scroll', function() {
+		var s = jQuery(window).scrollTop();
+		if (/MSIE /i.test(navigator.userAgent)) {
+			s = document.documentElement.scrollTop;
+		}
+		if (s > 50) {
+			$('.head,.slider').addClass('fixed');
+		} else {
+			$('.head,.slider').removeClass('fixed');
+		}
+	});
 });
