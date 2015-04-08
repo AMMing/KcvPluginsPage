@@ -101,5 +101,8 @@
 			$this->CreateDate=$row['create_date'];
 			$this->UpdateDate=$row['update_date'];
 		}
+		function setShipTypes($data){
+			$this->ShipTypes=$data;
+		}
 	}
 ?>

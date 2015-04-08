@@ -17,8 +17,8 @@
 			$result= $this->sqlhelper->getList($sqlstr);
 			$list= array();
 			foreach ($result as $item) {
-				$model = new expeditionInfoModel($item);
-				$model->ShipTypes=$this->expeditionShipTypesSqlhelper->getList($model->Id);
+				$model = new expeditionInfoSimpleModel($item);
+				$model->setShipTypes($this->expeditionShipTypesSqlhelper->getList($model->id));
 
 				array_push($list, $model);
 			}
@@ -31,7 +31,7 @@
             }
 			$sqlstr= "SELECT * FROM `expedition_info` WHERE `Id`='$id' AND `enable`=1";
 			$result= $this->sqlhelper->getItem($sqlstr);
-			$model = new expeditionInfoModel($result);
+			$model = new expeditionInfoSimpleModel($result);
 
 			return $model;
 		}

@@ -21,6 +21,8 @@
 	include_once(CORE_PATH.'/models/expedition_ship.php');
 	include_once(CORE_PATH.'/models/data_version.php');
 	include_once(CORE_PATH.'/models/data_version_result.php');
+	include_once(CORE_PATH.'/models/expedition_info_simple.php');
+	include_once(CORE_PATH.'/models/expedition_ship_simple.php');
 	// helper
 	include_once(CORE_PATH.'/helper/http_helper.php');
 	include_once(CORE_PATH.'/helper/html_helper.php');

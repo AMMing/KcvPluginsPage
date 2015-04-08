@@ -16,6 +16,8 @@
 		public $Count;
 		//条件（如果数值一样则只需要满足一条即可）
 		public $Conditions;
+		//禁止（不能使用该类型）
+		public $Ban;
 
 		function __construct($row)
 		{
@@ -25,6 +27,7 @@
 			$this->Abbreviation=$row['abbreviation'];
 			$this->Count=(int)$row['count'];
 			$this->Conditions=(int)$row['conditions'];
+			$this->Ban=(int)$row['ban'];
 		}
 	}
 ?>
