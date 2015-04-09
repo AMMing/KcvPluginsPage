@@ -3,6 +3,7 @@
     color: #666666;
     margin: 0;
     padding: 0;
+
 }
 body{
 	padding: 0;
@@ -15,6 +16,15 @@ a{
 ul{
 	list-style: none;
 }
+
+*{
+	transition: opacity 0.4s;
+	-moz-transition: opacity 0.4s;	/* Firefox 4 */
+	-webkit-transition: opacity 0.4s;	/* Safari 和 Chrome */
+	-o-transition: opacity 0.4s;
+}
+
+
 .clear{
 	clear: both;
 }
@@ -57,9 +67,12 @@ ul{
 }
 .head .logo img{
 	margin: 10px 10px 0 10px;
-}
-.head .logo img{
 	height:100px;
+
+	transition: height 0.4s;
+	-moz-transition: height 0.4s;	/* Firefox 4 */
+	-webkit-transition: height 0.4s;	/* Safari 和 Chrome */
+	-o-transition: height 0.4s;
 }
 
 .head.fixed .logo img{
@@ -159,13 +172,14 @@ ul{
 .right_content{
 	float: right;
 	width: 260px;
-	height: 400px;
+	height: 800px;
 	background: #ccc;
 	margin-right: 10px;
 }
 .tabs{
 	margin-right:280px;
 	padding-left:10px;
+	margin-bottom: 20px;
 }
 .tabs_item li{
 	float: left;
@@ -201,13 +215,121 @@ ul{
 .tabs_content{
 	background:#fff;
 	padding: 10px;
+	padding-right: 0px;
 }
 .tabs_content > div{
 	display:none;
 }
-.tabs_content > div:first-child{
+.tabs_content > div.current{
 	display:block;
 }
+
+/* comic */
+.comics{
+	margin-top: 10px;
+}
+
+.comics li{
+	float: left;
+	margin: 0 10px 10px 0;
+}
+.comics li >a{
+	display: block;
+	width: 190px;
+	height: 350px;
+	padding: 5px;
+	background: #fff;
+	border:5px solid #eee;
+	font-size: 14px;
+	position: relative;
+}
+
+
+.comics li img{
+	width: 190px;
+	height: 190px;
+}
+
+.comics li .author{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+  	width: 100%;
+  	height: 50px;
+}
+.comics li .author img{
+	width: 50px;
+	height: 50px;
+	float: left;
+}
+.comics li img.cover{
+	position: relative;
+	z-index: 991;
+}
+.comics li .author p{
+	float: left;
+	padding: 0 5px;
+  	line-height: 20px;
+  	color:#444;
+}
+
+.comics li .date{
+	position: absolute;
+	bottom: 2px;
+	right: 5px;
+	font-size: 12px;
+}
+.comics li .hover{
+	position: absolute;
+	width: 100%;
+	height:100%;
+	background: #eee;
+	top: 0;
+  	left: 0;
+  	z-index: 990;
+  	/*display: none;*/
+  	 opacity: 0;
+}
+.comics li .hover b{
+	  position: absolute;
+	  width: 170px;
+	  background: #F56A6A;
+	  bottom: 0;
+	  margin: 10px;
+	  padding: 5px;
+	  color: #FFF;
+	  text-align: center;
+	  font-size: 16px;
+	  font-weight: normal;
+}
+.comics li .hover b:hover{
+	  opacity: 0.8;
+}
+.comics li .hover b:first-child{
+	  bottom: 40px;
+}
+
+.comics li >a:hover{
+	border-color:#F56A6A;
+}
+
+.comics li >a:hover .hover{
+  	/*display: block;*/
+  	 opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* footer */
@@ -215,4 +337,6 @@ ul{
 	width:100%;
 	height:100px;
 	background:#eee;
+	border-top: 2px solid #F56A6A;
+	border-bottom: 5px solid #F56A6A;
 }

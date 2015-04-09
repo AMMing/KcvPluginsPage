@@ -113,12 +113,53 @@ var Slider = function() {
 		obj.set_current();
 	};
 };
+var Tabs = function() {
+	var obj = this;
 
+	obj.change_tab = function(tab) {
+		$('.content .tabs .tabs_item a,.content .tabs .tabs_content >div').removeClass('current');
+		$('.content .tabs .tabs_item a[data-tab="' + tab + '"],.content .tabs .tabs_content >div[data-tab="' + tab + '"]').addClass('current');
+	};
+
+	obj.init = function() {
+		var tabs = $('.content .tabs .tabs_item a');
+		tabs.bind('click', function() {
+			var $this = $(this);
+			var tab = $this.data('tab');
+			obj.change_tab(tab);
+
+			return false;
+		});
+	};
+};
+var WindowScroll = function() {
+	var obj = this;
+	obj.fixedTop = 50;
+
+	obj.init = function() {
+		$(window).bind('scroll', function() {
+			var s = $(window).scrollTop();
+			if (/MSIE /i.test(navigator.userAgent)) {
+				s = document.documentElement.scrollTop;
+			}
+			if (s > obj.fixedTop) {
+				$('.head,.slider').addClass('fixed');
+			} else {
+				$('.head,.slider').removeClass('fixed');
+			}
+		});
+	};
+};
 
 
 var slider = null;
+var tabs = null;
+var windowScroll = null;
 jQuery(document).ready(function($) {
 	slider = new Slider();
+	tabs = new Tabs();
+	windowScroll = new WindowScroll();
+
 	slider.images = [{
 		thumb: 'http://kcvp-logs-moe-static.smartgslb.com/images/head/1.jpg',
 		img: 'http://kcvp-logs-moe-static.smartgslb.com/images/head/1.jpg',
@@ -143,16 +184,6 @@ jQuery(document).ready(function($) {
 	slider.init();
 	slider.startauto();
 
-
-	jQuery(window).bind('scroll', function() {
-		var s = jQuery(window).scrollTop();
-		if (/MSIE /i.test(navigator.userAgent)) {
-			s = document.documentElement.scrollTop;
-		}
-		if (s > 50) {
-			$('.head,.slider').addClass('fixed');
-		} else {
-			$('.head,.slider').removeClass('fixed');
-		}
-	});
+	tabs.init();
+	windowScroll.init();
 });
