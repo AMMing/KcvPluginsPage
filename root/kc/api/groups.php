@@ -2,7 +2,7 @@
 
 	include_once('../base.php');
 
-    $sql=new kcShipTypesSql();
+    $sql=new groupShipTypesSql();
     $result=$sql->getList();
 
     $http->json($result);

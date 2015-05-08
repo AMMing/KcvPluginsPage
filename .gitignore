@@ -186,4 +186,5 @@ FakesAssemblies/
 
 # my mysql config
 
-php/mysql_config.php
+*/mysql_config.php
+php/core/mysql_config.php

@@ -1,10 +1,10 @@
 var headimgdata = [
-    ["/images/head/19990148.jpg", 140, 350, "#5EBFFF", "初めて恋をした記憶", "神のみぞ知るセカイ"],
-    ["/images/head/17605036.jpg", 450, 10, "#FFDDBE", "ゆめのかたち", "初音ミク"],
-    ["/images/head/31035932.jpg", 220, 430, "#3BC7FD", "私の大家族 (Inst)", "鳥の詩"],
-    ["/images/head/23350043.jpg", 110, 320, "#0066D5", "一番の宝物(Mix)", "Heavenly Beats"],
-    ["/images/head/234234.jpg", 480, 10, "#51B2FF", "氷花妖精伝", "遙～HARUKA"],
-    ["/images/head/7897897.jpg", 220, 430, "#0c9eff", "kagonotori", "SOUNDOT"]
+    ["images/head/19990148.jpg", 140, 350, "#5EBFFF", "初めて恋をした記憶", "神のみぞ知るセカイ"],
+    ["images/head/17605036.jpg", 450, 10, "#FFDDBE", "ゆめのかたち", "初音ミク"],
+    ["images/head/31035932.jpg", 220, 430, "#3BC7FD", "私の大家族 (Inst)", "鳥の詩"],
+    ["images/head/23350043.jpg", 110, 320, "#0066D5", "一番の宝物(Mix)", "Heavenly Beats"],
+    ["images/head/234234.jpg", 480, 10, "#51B2FF", "氷花妖精伝", "遙～HARUKA"],
+    ["images/head/7897897.jpg", 220, 430, "#0c9eff", "kagonotori", "SOUNDOT"]
 ];
 var head_img_index = 0;
 function ChangeHeadImage(data) {

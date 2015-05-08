@@ -8,6 +8,7 @@ RewriteRule ^(.*)$ /kcvp/$1
 RewriteCond %{HTTP_HOST} ^(www.)?kcvp.logs.moe$
 RewriteRule ^(/)?$ kcvp/index.php [L]
 RewriteRule ^/kcvp/([a-z0-9A-Z]+).zip$ /kcvp/download/index.php?key=$1
+RewriteRule ^/kcvp/([a-z0-9A-Z]+).jpg$ /kcvp/imgs/index.php?key=$1
 
 RewriteCond %{HTTP_HOST} ^(www.)?amm.moe$
 RewriteCond %{REQUEST_URI} !^/amm/
@@ -16,6 +17,7 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ /amm/$1
 RewriteCond %{HTTP_HOST} ^(www.)?amm.moe$
 RewriteRule ^(/)?$ amm/index.php [L]
+RewriteRule ^amm/book/comic-([a-z0-9A-Z]+).html$ amm/temp.php?id=$1
 
 RewriteCond %{HTTP_HOST} ^(www.)?kc.logs.moe$
 RewriteCond %{REQUEST_URI} !^/kc/

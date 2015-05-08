@@ -1,29 +1,40 @@
-var Expedition = function () {
+var Expedition = function() {
     var obj = this;
     obj.areasList = null;
     obj.shiptypeList = null;
+    obj.groupList = null;
 
-    obj.getAreasList = function (callback) {
+    obj.getAreasList = function(callback) {
         $.ajax({
             url: 'api/areas.php',
             dataType: 'json'
-        }).done(function (val) {
+        }).done(function(val) {
             if (!!callback) {
                 callback(val);
             }
         });
     };
-    obj.getShiptypeList = function (callback) {
+    obj.getShiptypeList = function(callback) {
         $.ajax({
             url: 'api/shiptype.php',
             dataType: 'json'
-        }).done(function (val) {
+        }).done(function(val) {
             if (!!callback) {
                 callback(val);
             }
         });
     };
-    obj.getAreasById = function (id) {
+    obj.getGroupList = function(callback) {
+        $.ajax({
+            url: 'api/groups.php',
+            dataType: 'json'
+        }).done(function(val) {
+            if (!!callback) {
+                callback(val);
+            }
+        });
+    };
+    obj.getAreasById = function(id) {
         for (var i = 0; i < obj.areasList.length; i++) {
             var item = obj.areasList[i];
             if (item.Id == id) {
@@ -33,7 +44,7 @@ var Expedition = function () {
 
         return null;
     };
-    obj.getAreasName = function (Id) {
+    obj.getAreasName = function(Id) {
         var val = obj.getAreasById(Id);
         if (!val) {
             return Id;
@@ -41,7 +52,7 @@ var Expedition = function () {
 
         return val.Name;
     };
-    obj.getShiptypeById = function (id) {
+    obj.getShiptypeById = function(id) {
         for (var i = 0; i < obj.shiptypeList.length; i++) {
             var item = obj.shiptypeList[i];
             if (item.Id == id) {
@@ -51,7 +62,7 @@ var Expedition = function () {
 
         return null;
     };
-    obj.getShipTypeName = function (Id) {
+    obj.getShipTypeName = function(Id) {
         var val = obj.getShiptypeById(Id);
         if (!val) {
             //return '不限定';
@@ -60,30 +71,40 @@ var Expedition = function () {
 
         return val.Name;
     };
-    obj.getList = function (callback) {
+    obj.getGroupById = function(id) {
+        for (var i = 0; i < obj.groupList.length; i++) {
+            var item = obj.groupList[i];
+            if (item.Id == id) {
+                return item;
+            }
+        }
+
+        return null;
+    };
+    obj.getList = function(callback) {
         $.ajax({
             url: 'api/expeditions.php',
             dataType: 'json'
-        }).done(function (val) {
+        }).done(function(val) {
             if (!!callback) {
                 callback(val.Data);
             }
         });
     };
-    obj.getList = function (callback) {
+    obj.getList = function(callback) {
         $.ajax({
             url: 'api/expeditions.php',
             dataType: 'json'
-        }).done(function (val) {
+        }).done(function(val) {
             if (!!callback) {
                 callback(val.Data);
             }
         });
     };
-    obj.uie = function (tag) {
+    obj.uie = function(tag) {
         return $('<' + tag + '></' + tag + '>');
     };
-    obj.XToY = function (val) {
+    obj.XToY = function(val) {
         if (!val) {
             return val;
         }
@@ -93,7 +114,7 @@ var Expedition = function () {
         }
         return list[0] + ' - ' + list[list.length - 1];
     };
-    obj.dateFormat = function (min) {
+    obj.dateFormat = function(min) {
         var h = (min / 60 >> 0);
         if (h == 0) {
             h = '00';
@@ -104,17 +125,27 @@ var Expedition = function () {
         }
         return h + ":" + m;
     };
-    obj.createShiptypeItem = function (item) {
+    obj.createGroupItem = function(id) {
+        var ul = obj.uie('ul');
+        var group = obj.getGroupById(id);
+        $.each(group.ShipTypes, function(index, val) {
+            ul.append(obj.uie('li').text(val.Name));
+        });
+
+        return ul;
+    };
+
+
+    obj.createShiptypeItem = function(item) {
         var tr_val = obj.uie('tr');
 
-        //tr_val.append(obj.uie('td').text(item.id));
-        tr_val.append(obj.uie('td').text(item.name));
-        tr_val.append(obj.uie('td').text(item.count));
-        tr_val.append(obj.uie('td').text(item.cond));
+        var group = obj.createGroupItem(item.GroupId);
+        tr_val.append(obj.uie('td').html(group));
+        tr_val.append(obj.uie('td').text(item.Count));
 
         return tr_val;
     };
-    obj.createTitle = function (val) {
+    obj.createTitle = function(val) {
         var div = obj.uie('div');
         div.addClass('title');
         div.append(obj.uie('span').text('[ID ' + val.num + ']'));
@@ -122,7 +153,7 @@ var Expedition = function () {
 
         return div;
     };
-    obj.createShiptypeList = function (list) {
+    obj.createShiptypeList = function(list) {
         if (!list || list.length <= 0) return null;
 
         var table = obj.uie('table');
@@ -130,11 +161,11 @@ var Expedition = function () {
         table.addClass('shiptype');
         table.append(tr_title);
         //tr_title.append(obj.uie('th').text('Id'));
-        tr_title.append(obj.uie('th').text('名称'));
+        tr_title.append(obj.uie('th').text('舰种'));
         tr_title.append(obj.uie('th').text('数量'));
-        tr_title.append(obj.uie('th').text('同等条件'));
+        // tr_title.append(obj.uie('th').text('同等条件'));
 
-        $.each(list, function (index, val) {
+        $.each(list, function(index, val) {
             var tr_val = obj.createShiptypeItem(val);
             if (!!tr_val)
                 table.append(tr_val);
@@ -142,9 +173,9 @@ var Expedition = function () {
 
         return table;
     };
-    obj.createItem = function (item) {
+    obj.createItem = function(item) {
         var div = obj.uie('table');
-        var row = function (title, val) {
+        var row = function(title, val) {
             if (!val || val.length <= 0) return;
 
             var tr = obj.uie('tr');
@@ -199,10 +230,10 @@ var Expedition = function () {
 
         return div;
     };
-    obj.createList = function () {
-        obj.getList(function (list) {
+    obj.createList = function() {
+        obj.getList(function(list) {
             var content = $('.content');
-            $.each(list, function (index, val) {
+            $.each(list, function(index, val) {
                 var title = obj.createTitle(val);
                 var table = obj.createItem(val);
                 content.append(title);
@@ -211,22 +242,27 @@ var Expedition = function () {
         });
     };
 
-    obj.initData = function () {
-        obj.getAreasList(function (val) {
+    obj.initData = function() {
+        obj.getAreasList(function(val) {
             obj.areasList = val;
-            obj.getShiptypeList(function (val) {
-                obj.shiptypeList = val;
-                obj.createList();
+            obj.getGroupList(function(val) {
+                obj.groupList = val;
+                obj.getShiptypeList(function(val) {
+                    obj.shiptypeList = val;
+                    obj.createList();
+                });
             });
         });
     };
-    obj.init = function () {
+    obj.init = function() {
         obj.initData();
     };
+
+    return obj;
 };
 
 var expedition = null;
-Tools.appendJs('http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js', function () {
+Tools.appendJs('http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js', function() {
     expedition = new Expedition();
     expedition.init();
 });

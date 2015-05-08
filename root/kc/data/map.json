@@ -1,0 +1,563 @@
+[
+  {
+    "Key": 11,
+    "Value": {
+      "Id": 11,
+      "Name": "鎮守府正面海域",
+      "MapAreaId": 1,
+      "MapArea": {
+        "Id": 1,
+        "Name": "鎮守府海域"
+      },
+      "IdInEachMapArea": 1,
+      "Level": 1,
+      "OperationName": "近海警備",
+      "OperationSummary": "鎮守府正面近海の<br>警備に出動せよ！",
+      "RequiredDefeatCount": 1
+    }
+  },
+  {
+    "Key": 12,
+    "Value": {
+      "Id": 12,
+      "Name": "南西諸島沖",
+      "MapAreaId": 1,
+      "MapArea": {
+        "Id": 1,
+        "Name": "鎮守府海域"
+      },
+      "IdInEachMapArea": 2,
+      "Level": 1,
+      "OperationName": "南西諸島沖警備",
+      "OperationSummary": "南西諸島沖に接近する<br>敵前衛艦隊を捕捉、迎撃せよ！",
+      "RequiredDefeatCount": 1
+    }
+  },
+  {
+    "Key": 13,
+    "Value": {
+      "Id": 13,
+      "Name": "製油所地帯沿岸",
+      "MapAreaId": 1,
+      "MapArea": {
+        "Id": 1,
+        "Name": "鎮守府海域"
+      },
+      "IdInEachMapArea": 3,
+      "Level": 2,
+      "OperationName": "海上護衛作戦",
+      "OperationSummary": "製油所地帯沿岸部の<br>海上輸送ラインを防衛せよ！",
+      "RequiredDefeatCount": 1
+    }
+  },
+  {
+    "Key": 14,
+    "Value": {
+      "Id": 14,
+      "Name": "南西諸島防衛線",
+      "MapAreaId": 1,
+      "MapArea": {
+        "Id": 1,
+        "Name": "鎮守府海域"
+      },
+      "IdInEachMapArea": 4,
+      "Level": 3,
+      "OperationName": "南1号作戦",
+      "OperationSummary": "南西諸島の防衛ライン上の<br>敵侵攻艦隊を捕捉、<br>全力出撃でこれを撃滅せよ！",
+      "RequiredDefeatCount": 1
+    }
+  },
+  {
+    "Key": 15,
+    "Value": {
+      "Id": 15,
+      "Name": "鎮守府近海",
+      "MapAreaId": 1,
+      "MapArea": {
+        "Id": 1,
+        "Name": "鎮守府海域"
+      },
+      "IdInEachMapArea": 5,
+      "Level": 5,
+      "OperationName": "鎮守府近海対潜哨戒",
+      "OperationSummary": "なるべく小編成の対潜哨戒部隊<br>を編成し、鎮守府近海に出没す<br>る敵潜水艦を発見・制圧せよ！",
+      "RequiredDefeatCount": 4
+    }
+  },
+  {
+    "Key": 16,
+    "Value": {
+      "Id": 16,
+      "Name": "鎮守府近海航路",
+      "MapAreaId": 1,
+      "MapArea": {
+        "Id": 1,
+        "Name": "鎮守府海域"
+      },
+      "IdInEachMapArea": 6,
+      "Level": 5,
+      "OperationName": "輸送船団護衛作戦",
+      "OperationSummary": "対潜及び防空能力に優れた艦艇<br>を基幹戦力とした艦隊を編成、<br>輸送船団航路の護衛にあたれ！",
+      "RequiredDefeatCount": 7
+    }
+  },
+  {
+    "Key": 21,
+    "Value": {
+      "Id": 21,
+      "Name": "カムラン半島",
+      "MapAreaId": 2,
+      "MapArea": {
+        "Id": 2,
+        "Name": "南西諸島海域"
+      },
+      "IdInEachMapArea": 1,
+      "Level": 3,
+      "OperationName": "カ号迎撃戦",
+      "OperationSummary": "カムラン半島付近に<br>遊弋する敵艦隊を捕捉、<br>これを迎撃せよ！",
+      "RequiredDefeatCount": 1
+    }
+  },
+  {
+    "Key": 22,
+    "Value": {
+      "Id": 22,
+      "Name": "バシー島沖",
+      "MapAreaId": 2,
+      "MapArea": {
+        "Id": 2,
+        "Name": "南西諸島海域"
+      },
+      "IdInEachMapArea": 2,
+      "Level": 4,
+      "OperationName": "柳輸送作戦",
+      "OperationSummary": "敵艦隊を排除し、<br>バシー島に集積された<br>ボーキサイト資材を輸送せよ！",
+      "RequiredDefeatCount": 1
+    }
+  },
+  {
+    "Key": 23,
+    "Value": {
+      "Id": 23,
+      "Name": "東部オリョール海",
+      "MapAreaId": 2,
+      "MapArea": {
+        "Id": 2,
+        "Name": "南西諸島海域"
+      },
+      "IdInEachMapArea": 3,
+      "Level": 5,
+      "OperationName": "O1号作戦",
+      "OperationSummary": "オリョール海に進出し、<br>敵通商破壊艦隊を排除して、<br>海上輸送ラインを防衛せよ！",
+      "RequiredDefeatCount": 1
+    }
+  },
+  {
+    "Key": 24,
+    "Value": {
+      "Id": 24,
+      "Name": "沖ノ島海域",
+      "MapAreaId": 2,
+      "MapArea": {
+        "Id": 2,
+        "Name": "南西諸島海域"
+      },
+      "IdInEachMapArea": 4,
+      "Level": 6,
+      "OperationName": "あ号艦隊決戦",
+      "OperationSummary": "沖ノ島海域に襲来した、<br>有力な敵機動部隊を迎撃、<br>全力出撃で、これを撃滅せよ！",
+      "RequiredDefeatCount": 1
+    }
+  },
+  {
+    "Key": 25,
+    "Value": {
+      "Id": 25,
+      "Name": "沖ノ島沖",
+      "MapAreaId": 2,
+      "MapArea": {
+        "Id": 2,
+        "Name": "南西諸島海域"
+      },
+      "IdInEachMapArea": 5,
+      "Level": 8,
+      "OperationName": "沖ノ島沖戦闘哨戒",
+      "OperationSummary": "同方面に敵反攻の兆候が報告さ<br>れた。巡洋艦を中心に哨戒部隊<br>を編成、敵艦隊の動向を探れ！",
+      "RequiredDefeatCount": 4
+    }
+  },
+  {
+    "Key": 31,
+    "Value": {
+      "Id": 31,
+      "Name": "モーレイ海",
+      "MapAreaId": 3,
+      "MapArea": {
+        "Id": 3,
+        "Name": "北方海域"
+      },
+      "IdInEachMapArea": 1,
+      "Level": 4,
+      "OperationName": "モーレイ海哨戒",
+      "OperationSummary": "北方海域に艦隊を進出させ、<br>モーレイ海を哨戒せよ！",
+      "RequiredDefeatCount": 1
+    }
+  },
+  {
+    "Key": 32,
+    "Value": {
+      "Id": 32,
+      "Name": "キス島沖",
+      "MapAreaId": 3,
+      "MapArea": {
+        "Id": 3,
+        "Name": "北方海域"
+      },
+      "IdInEachMapArea": 2,
+      "Level": 5,
+      "OperationName": "キス島撤退作戦",
+      "OperationSummary": "駆逐艦のみの高速艦隊で、敵艦隊に包囲された北方海域キス島に突入！島の守備隊を無事収容せよ！",
+      "RequiredDefeatCount": 1
+    }
+  },
+  {
+    "Key": 33,
+    "Value": {
+      "Id": 33,
+      "Name": "アルフォンシーノ方面",
+      "MapAreaId": 3,
+      "MapArea": {
+        "Id": 3,
+        "Name": "北方海域"
+      },
+      "IdInEachMapArea": 3,
+      "Level": 7,
+      "OperationName": "アルフォンシーノ方面進出",
+      "OperationSummary": "空母２隻以上を擁する空母機動<br>部隊をもって北方海域へ進出。<br>敵情の強行偵察を敢行せよ！",
+      "RequiredDefeatCount": 1
+    }
+  },
+  {
+    "Key": 34,
+    "Value": {
+      "Id": 34,
+      "Name": "北方海域全域",
+      "MapAreaId": 3,
+      "MapArea": {
+        "Id": 3,
+        "Name": "北方海域"
+      },
+      "IdInEachMapArea": 4,
+      "Level": 9,
+      "OperationName": "北方海域艦隊決戦",
+      "OperationSummary": "北方海域奥地に敵艦隊の大規模<br>泊地を発見！我が艦隊の総力を<br>挙げてこれを撃滅せよ！",
+      "RequiredDefeatCount": 1
+    }
+  },
+  {
+    "Key": 35,
+    "Value": {
+      "Id": 35,
+      "Name": "北方AL海域",
+      "MapAreaId": 3,
+      "MapArea": {
+        "Id": 3,
+        "Name": "北方海域"
+      },
+      "IdInEachMapArea": 5,
+      "Level": 9,
+      "OperationName": "北方海域戦闘哨戒",
+      "OperationSummary": "北方海域に敵増援の動きがある。<br>中規模の水上打撃部隊を派遣し、<br>敵増援を捕捉、これを撃滅せよ！",
+      "RequiredDefeatCount": 4
+    }
+  },
+  {
+    "Key": 41,
+    "Value": {
+      "Id": 41,
+      "Name": "ジャム島攻略作戦",
+      "MapAreaId": 4,
+      "MapArea": {
+        "Id": 4,
+        "Name": "西方海域"
+      },
+      "IdInEachMapArea": 1,
+      "Level": 5,
+      "OperationName": "ジャム島攻略作戦",
+      "OperationSummary": "西方作戦の第一段階として、ジャム島攻略作戦を展開せよ！(対潜警戒を厳とせよ)",
+      "RequiredDefeatCount": 1
+    }
+  },
+  {
+    "Key": 42,
+    "Value": {
+      "Id": 42,
+      "Name": "カレー洋制圧戦",
+      "MapAreaId": 4,
+      "MapArea": {
+        "Id": 4,
+        "Name": "西方海域"
+      },
+      "IdInEachMapArea": 2,
+      "Level": 6,
+      "OperationName": "カレー洋制圧戦",
+      "OperationSummary": "カレー洋の制圧作戦を行う。採掘地域を確保しつつ、カレー半島水域の敵艦隊を無力化せよ！",
+      "RequiredDefeatCount": 1
+    }
+  },
+  {
+    "Key": 43,
+    "Value": {
+      "Id": 43,
+      "Name": "リランカ島空襲",
+      "MapAreaId": 4,
+      "MapArea": {
+        "Id": 4,
+        "Name": "西方海域"
+      },
+      "IdInEachMapArea": 3,
+      "Level": 7,
+      "OperationName": "リランカ島空襲",
+      "OperationSummary": "空母を伴った艦隊を編成し、リランカ島の敵母港に展開する敵艦隊を叩け！",
+      "RequiredDefeatCount": 1
+    }
+  },
+  {
+    "Key": 44,
+    "Value": {
+      "Id": 44,
+      "Name": "カスガダマ沖海戦",
+      "MapAreaId": 4,
+      "MapArea": {
+        "Id": 4,
+        "Name": "西方海域"
+      },
+      "IdInEachMapArea": 4,
+      "Level": 8,
+      "OperationName": "カスガダマ沖海戦",
+      "OperationSummary": "カレー洋西方の敵哨戒線を突破、カスガダマ島沖へ侵攻し、敵東方艦隊の中枢部隊を撃滅せよ！",
+      "RequiredDefeatCount": 4
+    }
+  },
+  {
+    "Key": 51,
+    "Value": {
+      "Id": 51,
+      "Name": "南方海域前面",
+      "MapAreaId": 5,
+      "MapArea": {
+        "Id": 5,
+        "Name": "南方海域"
+      },
+      "IdInEachMapArea": 1,
+      "Level": 8,
+      "OperationName": "南方海域進出作戦",
+      "OperationSummary": "練度の高い水上打撃部隊を編成し、南方海域への進出を図れ！",
+      "RequiredDefeatCount": 1
+    }
+  },
+  {
+    "Key": 52,
+    "Value": {
+      "Id": 52,
+      "Name": "珊瑚諸島沖",
+      "MapAreaId": 5,
+      "MapArea": {
+        "Id": 5,
+        "Name": "南方海域"
+      },
+      "IdInEachMapArea": 2,
+      "Level": 9,
+      "OperationName": "珊瑚諸島沖海戦",
+      "OperationSummary": "MO作戦を実施する。空母機動部隊を展開し、南方海域に出没する敵機動部隊を叩け！",
+      "RequiredDefeatCount": 4
+    }
+  },
+  {
+    "Key": 53,
+    "Value": {
+      "Id": 53,
+      "Name": "サブ島沖海域",
+      "MapAreaId": 5,
+      "MapArea": {
+        "Id": 5,
+        "Name": "南方海域"
+      },
+      "IdInEachMapArea": 3,
+      "Level": 9,
+      "OperationName": "第一次サーモン沖海戦",
+      "OperationSummary": "敵泊地に対して水上打撃部隊による夜戦突撃を敢行し、艦隊後方の敵輸送艦を叩け！",
+      "RequiredDefeatCount": 5
+    }
+  },
+  {
+    "Key": 54,
+    "Value": {
+      "Id": 54,
+      "Name": "サーモン海域",
+      "MapAreaId": 5,
+      "MapArea": {
+        "Id": 5,
+        "Name": "南方海域"
+      },
+      "IdInEachMapArea": 4,
+      "Level": 9,
+      "OperationName": "東京急行",
+      "OperationSummary": "南方海域に有力な艦隊を投入し<br>鼠輸送作戦を敢行、可能であれ<br>ば同方面の敵艦隊も撃滅せよ！",
+      "RequiredDefeatCount": 5
+    }
+  },
+  {
+    "Key": 55,
+    "Value": {
+      "Id": 55,
+      "Name": "サーモン海域北方",
+      "MapAreaId": 5,
+      "MapArea": {
+        "Id": 5,
+        "Name": "南方海域"
+      },
+      "IdInEachMapArea": 5,
+      "Level": 9,
+      "OperationName": "第二次サーモン海戦",
+      "OperationSummary": "南方海域に敵の有力な機動部隊<br>の接近が確認された。空母機動<br>部隊を以て、これを迎撃せよ！",
+      "RequiredDefeatCount": 5
+    }
+  },
+  {
+    "Key": 61,
+    "Value": {
+      "Id": 61,
+      "Name": "中部海域哨戒線",
+      "MapAreaId": 6,
+      "MapArea": {
+        "Id": 6,
+        "Name": "中部海域"
+      },
+      "IdInEachMapArea": 1,
+      "Level": 8,
+      "OperationName": "潜水艦作戦",
+      "OperationSummary": "有力な潜水艦隊を編成し、中部<br>海域哨戒線に進出せよ。敵艦隊<br>を発見、これを漸減撃滅せよ！",
+      "RequiredDefeatCount": 1
+    }
+  },
+  {
+    "Key": 62,
+    "Value": {
+      "Id": 62,
+      "Name": "MS諸島沖",
+      "MapAreaId": 6,
+      "MapArea": {
+        "Id": 6,
+        "Name": "中部海域"
+      },
+      "IdInEachMapArea": 2,
+      "Level": 9,
+      "OperationName": "MS諸島防衛戦",
+      "OperationSummary": "MS諸島沖前面に展開し、同諸島<br>方面に接近しつつある敵攻略部<br>隊を捕捉、全力で撃滅せよ！",
+      "RequiredDefeatCount": 3
+    }
+  },
+  {
+    "Key": 301,
+    "Value": {
+      "Id": 301,
+      "Name": "カレー洋",
+      "MapAreaId": 30,
+      "MapArea": {
+        "Id": 30,
+        "Name": "発令！第十一号作戦"
+      },
+      "IdInEachMapArea": 1,
+      "Level": 7,
+      "OperationName": "発動準備、第十一号作戦！",
+      "OperationSummary": "第十一号作戦が発令された！主<br>作戦に先立ち、軽巡と駆逐艦で<br>編成された水雷戦隊による作戦<br>海域の威力偵察を実施せよ！",
+      "RequiredDefeatCount": 1
+    }
+  },
+  {
+    "Key": 302,
+    "Value": {
+      "Id": 302,
+      "Name": "カレー洋リランカ島沖",
+      "MapAreaId": 30,
+      "MapArea": {
+        "Id": 30,
+        "Name": "発令！第十一号作戦"
+      },
+      "IdInEachMapArea": 2,
+      "Level": 8,
+      "OperationName": "第二次カレー洋作戦",
+      "OperationSummary": "先の偵察活動により作戦海域の<br>敵情は判明した。主力連合艦隊<br>を同方面に進出させ、カレー洋<br>海域の制海権を握れ！",
+      "RequiredDefeatCount": 1
+    }
+  },
+  {
+    "Key": 303,
+    "Value": {
+      "Id": 303,
+      "Name": "ベーグル湾",
+      "MapAreaId": 30,
+      "MapArea": {
+        "Id": 30,
+        "Name": "発令！第十一号作戦"
+      },
+      "IdInEachMapArea": 3,
+      "Level": 9,
+      "OperationName": "ベーグル湾通商破壊戦",
+      "OperationSummary": "第十一号作戦の支作戦として、<br>ベーグル湾の通商破壊戦を展開<br>する。巡洋艦などを基幹とした<br>艦隊で敵海上補給路を叩け！",
+      "RequiredDefeatCount": 1
+    }
+  },
+  {
+    "Key": 304,
+    "Value": {
+      "Id": 304,
+      "Name": "カレー洋リランカ島沖",
+      "MapAreaId": 30,
+      "MapArea": {
+        "Id": 30,
+        "Name": "発令！第十一号作戦"
+      },
+      "IdInEachMapArea": 4,
+      "Level": 12,
+      "OperationName": "決戦！リランカ島攻略作戦",
+      "OperationSummary": "いよいよ主目標であるリランカ<br>島攻略作戦を実施する。精強な<br>連合艦隊を出撃、同島周辺の敵<br>を排除し、攻略を成功させよ！",
+      "RequiredDefeatCount": 1
+    }
+  },
+  {
+    "Key": 305,
+    "Value": {
+      "Id": 305,
+      "Name": "アンズ環礁沖",
+      "MapAreaId": 30,
+      "MapArea": {
+        "Id": 30,
+        "Name": "発令！第十一号作戦"
+      },
+      "IdInEachMapArea": 5,
+      "Level": 13,
+      "OperationName": "アンズ環礁泊地攻撃作戦",
+      "OperationSummary": "敵秘匿艦隊泊地が発見された！<br>精鋭の小艦隊で同泊地に殴り込<br>みによる強襲をかけ、本方面の<br>敵艦隊の動きを封殺せよ！",
+      "RequiredDefeatCount": 1
+    }
+  },
+  {
+    "Key": 306,
+    "Value": {
+      "Id": 306,
+      "Name": "ステビア海",
+      "MapAreaId": 30,
+      "MapArea": {
+        "Id": 30,
+        "Name": "発令！第十一号作戦"
+      },
+      "IdInEachMapArea": 6,
+      "Level": 14,
+      "OperationName": "打通作戦！ステビア海を越えて",
+      "OperationSummary": "いよいよ作戦最終段階に入る。<br>カレー洋からステビア海方面に<br>進出、同方面の敵艦隊を撃破、<br>海上打通連絡作戦を完遂せよ！",
+      "RequiredDefeatCount": 1
+    }
+  }
+]

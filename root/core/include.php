@@ -23,6 +23,10 @@
 	include_once(CORE_PATH.'/models/data_version_result.php');
 	include_once(CORE_PATH.'/models/expedition_info_simple.php');
 	include_once(CORE_PATH.'/models/expedition_ship_simple.php');
+	
+	include_once(CORE_PATH.'/models/expedition_ship_types_kc.php');
+	include_once(CORE_PATH.'/models/group_ship_types.php');
+	include_once(CORE_PATH.'/models/kc_ship_types.php');
 	// helper
 	include_once(CORE_PATH.'/helper/http_helper.php');
 	include_once(CORE_PATH.'/helper/html_helper.php');
@@ -45,5 +49,10 @@
 	include_once(CORE_PATH.'/sqlhelper/expedition_info.php');
 	include_once(CORE_PATH.'/sqlhelper/expedition_ship_types.php');
 	include_once(CORE_PATH.'/sqlhelper/data_version.php');
+
+	include_once(CORE_PATH.'/sqlhelper/expedition_ship_types_kc.php');
+	include_once(CORE_PATH.'/sqlhelper/group_ship_types_table.php');
+	include_once(CORE_PATH.'/sqlhelper/group_ship_types.php');
+	include_once(CORE_PATH.'/sqlhelper/kc_ship_types.php');
 
 ?>

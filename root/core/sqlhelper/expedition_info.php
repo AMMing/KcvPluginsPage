@@ -6,11 +6,13 @@
 	class expeditionInfoSql
 	{
 		public $sqlhelper;
-		public $expeditionShipTypesSqlhelper;
+		// public $expeditionShipTypesSqlhelper;
+		public $expeditionShipTypesKcSqlhelper;
 		function __construct()
 		{
 			$this->sqlhelper=new mysqlHelper();
-			$this->expeditionShipTypesSqlhelper=new expeditionShipTypesSql();
+			// $this->expeditionShipTypesSqlhelper=new expeditionShipTypesSql();
+			$this->expeditionShipTypesKcSqlhelper=new expeditionShipTypesKcSql();
 		}
 		function getList(){
 			$sqlstr= "SELECT * FROM `expedition_info` WHERE `enable`=1";
@@ -18,7 +20,7 @@
 			$list= array();
 			foreach ($result as $item) {
 				$model = new expeditionInfoSimpleModel($item);
-				$model->setShipTypes($this->expeditionShipTypesSqlhelper->getList($model->id));
+				$model->setShipTypes($this->expeditionShipTypesKcSqlhelper->getList($model->id));
 
 				array_push($list, $model);
 			}

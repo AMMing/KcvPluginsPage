@@ -1,0 +1,170 @@
+[
+  {
+    "Key": 1,
+    "Value": {
+      "Id": 1,
+      "Name": "海防艦",
+      "SortNumber": 1
+    }
+  },
+  {
+    "Key": 2,
+    "Value": {
+      "Id": 2,
+      "Name": "駆逐艦",
+      "SortNumber": 2
+    }
+  },
+  {
+    "Key": 3,
+    "Value": {
+      "Id": 3,
+      "Name": "軽巡洋艦",
+      "SortNumber": 3
+    }
+  },
+  {
+    "Key": 4,
+    "Value": {
+      "Id": 4,
+      "Name": "重雷装巡洋艦",
+      "SortNumber": 4
+    }
+  },
+  {
+    "Key": 5,
+    "Value": {
+      "Id": 5,
+      "Name": "重巡洋艦",
+      "SortNumber": 5
+    }
+  },
+  {
+    "Key": 6,
+    "Value": {
+      "Id": 6,
+      "Name": "航空巡洋艦",
+      "SortNumber": 6
+    }
+  },
+  {
+    "Key": 7,
+    "Value": {
+      "Id": 7,
+      "Name": "軽空母",
+      "SortNumber": 7
+    }
+  },
+  {
+    "Key": 8,
+    "Value": {
+      "Id": 8,
+      "Name": "戦艦",
+      "SortNumber": 8
+    }
+  },
+  {
+    "Key": 9,
+    "Value": {
+      "Id": 9,
+      "Name": "戦艦",
+      "SortNumber": 9
+    }
+  },
+  {
+    "Key": 10,
+    "Value": {
+      "Id": 10,
+      "Name": "航空戦艦",
+      "SortNumber": 10
+    }
+  },
+  {
+    "Key": 11,
+    "Value": {
+      "Id": 11,
+      "Name": "正規空母",
+      "SortNumber": 11
+    }
+  },
+  {
+    "Key": 12,
+    "Value": {
+      "Id": 12,
+      "Name": "超弩級戦艦",
+      "SortNumber": 12
+    }
+  },
+  {
+    "Key": 13,
+    "Value": {
+      "Id": 13,
+      "Name": "潜水艦",
+      "SortNumber": 13
+    }
+  },
+  {
+    "Key": 14,
+    "Value": {
+      "Id": 14,
+      "Name": "潜水空母",
+      "SortNumber": 14
+    }
+  },
+  {
+    "Key": 15,
+    "Value": {
+      "Id": 15,
+      "Name": "補給艦",
+      "SortNumber": 15
+    }
+  },
+  {
+    "Key": 16,
+    "Value": {
+      "Id": 16,
+      "Name": "水上機母艦",
+      "SortNumber": 16
+    }
+  },
+  {
+    "Key": 17,
+    "Value": {
+      "Id": 17,
+      "Name": "揚陸艦",
+      "SortNumber": 17
+    }
+  },
+  {
+    "Key": 18,
+    "Value": {
+      "Id": 18,
+      "Name": "装甲空母",
+      "SortNumber": 18
+    }
+  },
+  {
+    "Key": 19,
+    "Value": {
+      "Id": 19,
+      "Name": "工作艦",
+      "SortNumber": 19
+    }
+  },
+  {
+    "Key": 20,
+    "Value": {
+      "Id": 20,
+      "Name": "潜水母艦",
+      "SortNumber": 20
+    }
+  },
+  {
+    "Key": 21,
+    "Value": {
+      "Id": 21,
+      "Name": "練習巡洋艦",
+      "SortNumber": 21
+    }
+  }
+]
