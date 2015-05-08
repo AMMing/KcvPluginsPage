@@ -58,6 +58,6 @@ td.shiptype{
   vertical-align: top;
 }
 
-table.shiptype td li{
+li{
   list-style: none;
 }

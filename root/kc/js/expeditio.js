@@ -128,11 +128,14 @@ var Expedition = function() {
     obj.createGroupItem = function(id) {
         var ul = obj.uie('ul');
         var group = obj.getGroupById(id);
-        $.each(group.ShipTypes, function(index, val) {
-            ul.append(obj.uie('li').text(val.Name));
-        });
+        if (!!group) {
+            $.each(group.ShipTypes, function(index, val) {
+                ul.append(obj.uie('li').text(val.Name));
+            });
 
-        return ul;
+            return ul;
+        }
+        return null;
     };
 
 
@@ -186,7 +189,7 @@ var Expedition = function() {
             div.append(tr);
 
             td_title.text(title);
-            td_val.text(val);
+            td_val.html(val);
 
             return tr;
         };
@@ -213,7 +216,7 @@ var Expedition = function() {
         row('获得家具箱（大）', obj.XToY(item.g_f_b));
         row('总等级', item.sum_lv);
         row('旗舰等级', item.fs_lv);
-        row('旗舰类型', obj.getShipTypeName(item.fs_t));
+        row('旗舰类型', obj.createGroupItem(item.fs_t));
         row('最低舰数', item.s_count);
         row('带缶数', item.b_count);
         row('带缶舰数', item.bs_count);
